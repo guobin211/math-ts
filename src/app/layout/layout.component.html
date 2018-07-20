@@ -1,0 +1,169 @@
+<nz-layout class="ng-body">
+  <!-- 侧边栏导航  -->
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate" [nzCollapsedWidth]="0"
+            [nzWidth]="150">
+
+    <div class="logo">
+      <h2 class="logo-h2"> NZ-Admin</h2>
+    </div>
+    <!-- 导航列表 -->
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu>
+        <span title><i class="anticon anticon-home"></i><span class="nav-text">
+            主页
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('主页','仪表盘')">
+            <a [routerLink]="['./dashboard']">仪表盘</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 一级导航-->
+      <li nz-submenu>
+        <span title>
+          <!-- icon -->
+          <i class="anticon anticon-appstore-o"></i>
+          <span class="nav-text">
+          组件
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('组件','按钮')">
+            <a [routerLink]="['./button']" [queryParams]="{name: '按钮'}">按钮</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('组件','图标')">
+            <a [routerLink]="['./icon']" [queryParams]="{name: '图标'}">图标</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('组件','步骤条')">
+            <a [routerLink]="['./steps']" [queryParams]="{name: '步骤条'}">步骤条</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('组件','对话框')">
+            <a [routerLink]="['./feedback']" [queryParams]="{name: '对话框'}">对话框</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li nz-submenu>
+        <span title>
+          <!-- icon -->
+          <i class="anticon anticon-spin anticon-loading"></i>
+          <span class="nav-text">
+          动画
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('组件','动画')">
+            <a [routerLink]="['./animate']" [queryParams]="{name: '动画'}">animate</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu>
+        <span title>
+          <!-- icon -->
+          <i class="anticon anticon-profile"></i>
+          <span class="nav-text">
+          表单
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('表单','基础表单')">
+            <a [routerLink]="['./form']" [queryParams]="{name: '按钮'}">基础表单</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li nz-submenu>
+        <span title>
+          <!-- icon -->
+          <i class="anticon anticon-table"></i>
+          <span class="nav-text">
+          表格
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('表格','表格')">
+            <a [routerLink]="['./table']" [queryParams]="{name: '表格'}">表格</a>
+          </li>
+          <!-- ajax table -->
+          <li nz-menu-item (click)="goAnother('表格','Ajax表格')">
+            <a [routerLink]="['./ajaxTable']" [queryParams]="{name: 'Ajax表格'}">Ajax表格</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu>
+        <span title>
+          <!-- icon -->
+         <i class="anticon anticon-edit"></i>
+          <span class="nav-text">
+          编辑器
+        </span></span>
+        <ul>
+          <!-- 二级导航 -->
+          <li nz-menu-item (click)="goAnother('编辑器','quill')">
+            <a [routerLink]="['./quillEdit']" [queryParams]="{name: 'quill'}">quill</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </nz-sider>
+  <!--  页面主体  -->
+  <nz-layout>
+
+    <nz-header style="background: #fff; padding:0;position: relative">
+      <!-- 菜单图标 -->
+      <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
+         (click)="isCollapsed=!isCollapsed"></i>
+
+      <!-- 消息提示框 -->
+      <nz-badge [nzCount]="5" (click)="changeShow()" style="position: absolute;right: 30px;top: 15px;">
+        <nz-avatar nzIcon="anticon anticon-user"
+                   nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+      </nz-badge>
+
+      <!-- 个人设置中心 -->
+      <div *ngIf="showUserInfo" nz-col class="gutter-row" nzSpan="9">
+        <div class="gutter-box">
+          用户中心
+        </div>
+        <div class="gutter-box">
+          个人信息
+        </div>
+        <div class="gutter-box">
+          退出登录
+        </div>
+        <div class="gutter-box">
+          设置
+        </div>
+      </div>
+
+    </nz-header>
+
+
+    <!-- 内容主体 -->
+    <nz-content style="margin:0 6px;">
+      <!-- 面包屑导航 -->
+      <nz-breadcrumb style="margin:12px 0;">
+        <nz-breadcrumb-item *ngFor="let item of contentUl">{{item}}</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <!--  内容中间  -->
+      <div style="padding:6px; background: #fff; min-height: 520px;">
+        <!-- 二级路由插座 -->
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <!-- 页脚 -->
+    <nz-footer style="text-align: center;">Ant Design ©2018 For Angular</nz-footer>
+
+  </nz-layout>
+</nz-layout>

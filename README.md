@@ -1,5 +1,7 @@
 # NgAntdAdmin
 
+## 富文本编辑器ngx-quill
+
 ## 项目初始化#
 ``` ng add ng-zorro-antd [options] 
 

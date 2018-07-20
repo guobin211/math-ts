@@ -1,0 +1,50 @@
+<div class="feedback-page">
+  <!-- 响应式布局 -->
+  <div nz-row>
+    <!-- 响应式的col -->
+    <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4" class="feedback-col">
+
+      <button nz-button nzType="primary" (click)="showModalTop()">警告信息框</button>
+      <!-- nzStyle 控制样式 -->
+      <nz-modal [nzStyle]="{ top: '20px' }" [(nzVisible)]="isVisibleTop" nzTitle="20px to Top"
+                (nzOnCancel)="handleCancelTop()" (nzOnOk)="handleOkTop()">
+        <nz-alert nzType="success" nzMessage="Success Text"></nz-alert>
+        <nz-alert nzType="warning" nzMessage="Warning" nzShowIcon></nz-alert>
+        <nz-alert nzType="error" nzMessage="Error Text"></nz-alert>
+      </nz-modal>
+
+    </div>
+
+    <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4" class="feedback-col">
+      <ng-template #template>
+        <div class="ant-notification-notice-content">
+          <div class="ant-notification-notice-with-icon">
+            <span class="ant-notification-notice-icon"><i class="anticon anticon-smile-circle"
+                                                          style="color: rgb(16, 142, 233);"></i></span>
+            <div class="ant-notification-notice-message">Notification Title</div>
+            <div class="ant-notification-notice-description">
+              This is the content of the notification. This is the content of the notification. This is the content of
+              the notification.
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <button nz-button [nzType]="'primary'" (click)="createBasicNotification(template)">消息提示框</button>
+    </div>
+
+    <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4" class="feedback-col">
+      <button nz-button nzType="danger" (click)="showModalMiddle()">文字提示框</button>
+
+      <nz-modal nzWrapClassName="vertical-center-modal" [(nzVisible)]="isVisibleMiddle"
+                nzTitle="Vertically centered modal dialog" (nzOnCancel)="handleCancelMiddle()"
+                (nzOnOk)="handleOkMiddle()">
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </nz-modal>
+    </div>
+
+  </div>
+
+
+</div>

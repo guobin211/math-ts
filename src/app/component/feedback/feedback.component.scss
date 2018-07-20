@@ -1,0 +1,24 @@
+.feedback-page {
+  .feedback-col {
+    display: flex;
+    height: 80px;
+    margin: 5px;
+    background-color: rgba(240, 242, 245, 0.63);
+    align-items: center;
+    button {
+      margin-left: 15px;
+    }
+  }
+  ::ng-deep .vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ::ng-deep .vertical-center-modal .ant-modal {
+    top: 0;
+  }
+
+}
+
+

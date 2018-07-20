@@ -1,0 +1,37 @@
+<div nz-row class="steps-page">
+
+  <div nz-col>
+    <!-- 步骤条 -->
+    <nz-steps [nzSize]="small">
+      <nz-step nzTitle="Login" nzStatus="finish" nzIcon="anticon anticon-user"></nz-step>
+      <nz-step nzTitle="Verification" nzStatus="finish" nzIcon="anticon anticon-solution"></nz-step>
+      <nz-step nzTitle="Pay" nzStatus="process" nzIcon="anticon anticon-spin anticon-loading"></nz-step>
+      <nz-step nzTitle="Done" nzStatus="wait" [nzIcon]="iconTemplate"></nz-step>
+      <ng-template #iconTemplate><i class="anticon anticon-smile-o"></i></ng-template>
+    </nz-steps>
+  </div>
+
+  <!-- 响应式的col -->
+  <div nz-col>
+    <!--  进度条 -->
+    <nz-progress [nzPercent]="30"></nz-progress>
+    <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+    <nz-progress [nzPercent]="70" nzStatus="exception"></nz-progress>
+    <nz-progress [nzPercent]="100"></nz-progress>
+    <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+
+  </div>
+
+  <div nz-col class="radio">
+    <nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="80"></nz-progress>
+    <nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="80" nzStatus="exception"></nz-progress>
+    <nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="80"></nz-progress>
+  </div>
+
+  <div nz-col>
+    <!-- 加载中 -->
+    <nz-spin [nzSize]="'small'"></nz-spin>
+    <nz-spin></nz-spin>
+    <nz-spin [nzSize]="'large'"></nz-spin>
+  </div>
+</div>
