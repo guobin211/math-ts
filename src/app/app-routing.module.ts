@@ -14,9 +14,12 @@ import {FeedbackComponent} from "./component/feedback/feedback.component";
 import {TableComponent} from "./component/table/table.component";
 import {TableajaxComponent} from "./component/tableajax/tableajax.component";
 import {QuilleditComponent} from "./plugin/quilledit/quilledit.component";
+import {CascadeComponent} from "./component/cascade/cascade.component";
+import {CheckboxComponent} from "./component/checkbox/checkbox.component";
+import {CalendarComponent} from "./component/calendar/calendar.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', component: LayoutComponent, children: [
       {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -31,7 +34,10 @@ const routes: Routes = [
       {path: 'feedback', component: FeedbackComponent},
       {path: 'table', component: TableComponent},
       {path: 'ajaxTable', component: TableajaxComponent},
-      {path: 'quillEdit', component: QuilleditComponent}
+      {path: 'quillEdit', component: QuilleditComponent},
+      {path: 'cascade', component: CascadeComponent},
+      {path: 'checkbox', component: CheckboxComponent},
+      {path: 'calendar', component: CalendarComponent}
     ]
   },
   {path: 'login', component: LoginComponent},

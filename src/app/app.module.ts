@@ -25,6 +25,10 @@ import {TableComponent} from './component/table/table.component';
 import {TableajaxComponent} from './component/tableajax/tableajax.component';
 import {QuilleditComponent} from './plugin/quilledit/quilledit.component';
 import {QuillModule} from "ngx-quill";
+import {HttpModule, JsonpModule} from "@angular/http";
+import {CascadeComponent} from './component/cascade/cascade.component';
+import {CheckboxComponent} from './component/checkbox/checkbox.component';
+import {CalendarComponent} from './component/calendar/calendar.component';
 
 registerLocaleData(zh);
 
@@ -45,7 +49,10 @@ registerLocaleData(zh);
     FeedbackComponent,
     TableComponent,
     TableajaxComponent,
-    QuilleditComponent
+    QuilleditComponent,
+    CascadeComponent,
+    CheckboxComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +61,8 @@ registerLocaleData(zh);
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    HttpModule,
+    JsonpModule,
     QuillModule,
     NgZorroAntdModule
   ],

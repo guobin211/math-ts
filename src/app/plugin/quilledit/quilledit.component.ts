@@ -6,7 +6,9 @@ import {Component, ElementRef, OnInit} from '@angular/core';
   styleUrls: ['./quilledit.component.scss']
 })
 export class QuilleditComponent implements OnInit {
+
   editData;
+  // img文件自动转换为base64编码
   placeholderText = '请输入文字';
   maxLengthNum;
   minLengthNum;
@@ -15,6 +17,7 @@ export class QuilleditComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   doSubmit(data) {
@@ -22,6 +25,7 @@ export class QuilleditComponent implements OnInit {
   }
 
   doClear() {
-    this.editData = [];
+    this.editData = '';
   }
+
 }

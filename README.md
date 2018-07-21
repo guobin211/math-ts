@@ -19,10 +19,18 @@
 ```
   1. 主要文件夹
   services ==> 公共服务
+     http
+     storage
+     ajax
   component ==> ng-zorro组件
+  
   layout  ==> 基本布局
+  
   pages  ==>  一级路由页面
+  
   pipes  ==>  管道过滤器
+    pipe
+    validator
   class  ==>  类
   
   2. 路由配置
