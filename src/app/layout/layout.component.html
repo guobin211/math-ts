@@ -1,7 +1,9 @@
 <nz-layout class="ng-body">
+  <!--  响应式列布局媒体查询断点  从小到大  -->
+  <!--  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">  -->
   <!-- 侧边栏导航  -->
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate" [nzCollapsedWidth]="0"
-            [nzWidth]="150">
+            [nzWidth]="150" style="overflow: auto; height: 100vh;">
 
     <div class="logo">
       <h2 class="logo-h2"> NZ-Admin</h2>
@@ -46,6 +48,10 @@
             <a [routerLink]="['./feedback']" [queryParams]="{name: '对话框'}">对话框</a>
           </li>
 
+          <li nz-menu-item (click)="goAnother('组件','日历')">
+            <a [routerLink]="['./calendar']" [queryParams]="{name: '日历'}">日历</a>
+          </li>
+
         </ul>
       </li>
 
@@ -75,6 +81,14 @@
           <!-- 二级导航 -->
           <li nz-menu-item (click)="goAnother('表单','基础表单')">
             <a [routerLink]="['./form']" [queryParams]="{name: '按钮'}">基础表单</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('表单','层联选择')">
+            <a [routerLink]="['./cascade']" [queryParams]="{name: '层联选择'}">层联选择</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('表单','多选框')">
+            <a [routerLink]="['./checkbox']" [queryParams]="{name: '多选框'}">多选框</a>
           </li>
 
         </ul>
@@ -132,18 +146,18 @@
       </nz-badge>
 
       <!-- 个人设置中心 -->
-      <div *ngIf="showUserInfo" nz-col class="gutter-row" nzSpan="9">
-        <div class="gutter-box">
-          用户中心
+      <div *ngIf="showUserInfo" nz-col class="gutter-row" nzSpan="6">
+        <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
+          <span>用户中心</span>
         </div>
-        <div class="gutter-box">
-          个人信息
+        <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
+          <span>个人信息</span>
         </div>
-        <div class="gutter-box">
-          退出登录
+        <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
+          <span>退出登录</span>
         </div>
-        <div class="gutter-box">
-          设置
+        <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
+          <span>设置</span>
         </div>
       </div>
 

@@ -31,7 +31,7 @@
       </ng-template>
       <button nz-button [nzType]="'primary'" (click)="createBasicNotification(template)">消息提示框</button>
     </div>
-
+    <!-- 通知提醒框 -->
     <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4" class="feedback-col">
       <button nz-button nzType="danger" (click)="showModalMiddle()">文字提示框</button>
 
@@ -42,6 +42,13 @@
         <p>some contents...</p>
         <p>some contents...</p>
       </nz-modal>
+    </div>
+
+    <!--Popconfirm气泡确认框-->
+    <div nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4" class="feedback-col">
+      <a nz-popconfirm nzTitle="Are you sure delete this task?" [nzCondition]="switchValue" (nzOnConfirm)="confirm()"
+         (nzOnCancel)="cancel()">Delete</a>
+      <nz-switch [(ngModel)]="switchValue"></nz-switch>
     </div>
 
   </div>

@@ -1,5 +1,5 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
-import {NzNotificationService} from "ng-zorro-antd";
+import {NzMessageService, NzNotificationService} from "ng-zorro-antd";
 
 @Component({
   selector: 'app-feedback',
@@ -10,14 +10,22 @@ export class FeedbackComponent implements OnInit {
 
   isVisibleTop = false;
   isVisibleMiddle = false;
+  switchValue = false;
 
-  constructor(private notification: NzNotificationService) {
+  constructor(private notification: NzNotificationService, private nzMessageService: NzMessageService) {
   }
 
   ngOnInit() {
 
   }
 
+  cancel(): void {
+    this.nzMessageService.info('click cancel');
+  }
+
+  confirm(): void {
+    this.nzMessageService.info('click confirm');
+  }
   // 创建消息提示框
   createBasicNotification(template: TemplateRef<{}>): void {
     this.notification.template(template);
