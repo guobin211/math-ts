@@ -29,6 +29,7 @@ import {HttpModule, JsonpModule} from "@angular/http";
 import {CascadeComponent} from './component/cascade/cascade.component';
 import {CheckboxComponent} from './component/checkbox/checkbox.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
+import {CardComponent} from './component/card/card.component';
 
 registerLocaleData(zh);
 
@@ -52,7 +53,8 @@ registerLocaleData(zh);
     QuilleditComponent,
     CascadeComponent,
     CheckboxComponent,
-    CalendarComponent
+    CalendarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

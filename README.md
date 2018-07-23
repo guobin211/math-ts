@@ -11,6 +11,7 @@
 
 ```
   1.富文本编辑器  ngx-quill
+  2.ng-animate  快速动画库 --需要animation.js
 
 ```
 

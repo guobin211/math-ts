@@ -1,3 +1,26 @@
-<p>
-  animate works!
-</p>
+<div nz-row
+     nzAlign="middle"
+     [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }"
+     nzJustify="center"
+     nzType="flex">
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       [@bounce]="{ value: bounce, params: { timing: myTiming || 5, delay: myDelay || 2 } }">
+    <span>ng-animate</span>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       *ngFor="let item of data; let i = index;"
+       [@changeState]="item.state"
+       (click)="toggleState(item)">
+    <span>状态改变动画{{i+1}}</span>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       *ngIf="isShow"
+       [@flyInOut]="'in'"
+       (click)="onLeave()">
+    <span>进出场动画</span>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+.animate-item {
+  border: 1px solid rgba(204, 204, 204, 0.43);
+  height: 98px;
+  border-radius: 9px;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  span {
+    margin: 0 auto;
+    display: inline-block;
+  }
+}

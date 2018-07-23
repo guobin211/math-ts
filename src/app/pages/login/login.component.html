@@ -28,9 +28,20 @@
           <span>记住密码</span>
         </label>
         <a class="login-form-forgot" class="login-form-forgot">忘记密码</a>
-        <button nz-button class="login-form-button" [nzType]="'primary'">登录</button>
-        Or
-        <a routerLink="/register">注册</a>
+        <button nz-button class="login-form-button" [nzType]="'primary'" (click)="submitForm(validateForm)">登录</button>
+
+
+        <div nz-row>
+          <div nz-col [nzSpan]="12">
+            <a routerLink="/register">注册</a>
+          </div>
+          <div nz-col [nzSpan]="12">
+            <i class="anticon anticon-wechat"></i>
+            <i class="anticon anticon-qq"></i>
+            <i class="anticon anticon-gitlab"></i>
+          </div>
+        </div>
+
       </nz-form-control>
     </nz-form-item>
 

@@ -3,6 +3,7 @@
   height: 100%;
   align-items: center;
   display: flex;
+  position: relative;
   .login-form {
     max-width: 300px;
     margin: 0 auto;
@@ -14,5 +15,9 @@
 
   .login-form-button {
     width: 100%;
+  }
+  .anticon {
+    color: #1890ff;
+    margin-right: 10px;
   }
 }

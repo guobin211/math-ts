@@ -52,6 +52,10 @@
             <a [routerLink]="['./calendar']" [queryParams]="{name: '日历'}">日历</a>
           </li>
 
+          <li nz-menu-item (click)="goAnother('组件','卡片')">
+            <a [routerLink]="['./card']" [queryParams]="{name: '卡片'}">卡片</a>
+          </li>
+
         </ul>
       </li>
 
