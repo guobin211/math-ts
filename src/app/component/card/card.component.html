@@ -1,0 +1,36 @@
+<div style="background: #ECECEC;padding:30px;">
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+
+      <nz-card [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+        <nz-card-meta nzTitle="卡片标题" nzDescription="详情描述" [nzAvatar]="avatarTemplate"></nz-card-meta>
+      </nz-card>
+      <ng-template #avatarTemplate>
+        <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+      </ng-template>
+      <ng-template #coverTemplate>
+        <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>
+      </ng-template>
+      <ng-template #actionSetting>
+        <i class="anticon anticon-setting"></i>
+      </ng-template>
+      <ng-template #actionEdit>
+        <i class="anticon anticon-edit"></i>
+      </ng-template>
+      <ng-template #actionEllipsis>
+        <i class="anticon anticon-ellipsis"></i>
+      </ng-template>
+
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-card [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+        <nz-card-meta nzTitle="卡片标题" nzDescription="详情描述" [nzAvatar]="avatarTemplate"></nz-card-meta>
+      </nz-card>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="8">
+      <nz-card [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit,actionEllipsis]">
+        <nz-card-meta nzTitle="卡片标题" nzDescription="详情描述" [nzAvatar]="avatarTemplate"></nz-card-meta>
+      </nz-card>
+    </div>
+  </div>
+</div>

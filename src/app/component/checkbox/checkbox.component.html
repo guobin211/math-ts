@@ -1,0 +1,61 @@
+<!-- 多选框 -->
+<nz-checkbox-group [(ngModel)]="checkOptionsOne" (ngModelChange)="log(checkOptionsOne)">
+
+</nz-checkbox-group>
+<br>
+
+<br>
+<nz-checkbox-group [(ngModel)]="checkOptionsTwo" (ngModelChange)="log(checkOptionsTwo)">
+
+</nz-checkbox-group>
+<br>
+
+<br>
+<nz-checkbox-group [(ngModel)]="checkOptionsThree" (ngModelChange)="log(checkOptionsThree)">
+
+</nz-checkbox-group>
+
+<!-- 评分组件 -->
+<nz-rate [ngModel]="0" nzAllowHalf [nzCharacter]="characterIcon"></nz-rate>
+<br>
+<nz-rate [ngModel]="0" nzAllowHalf class="large" [nzCharacter]="characterEnLetter"></nz-rate>
+<br>
+<nz-rate [ngModel]="0" nzAllowHalf [nzCharacter]="characterZhLetter"></nz-rate>
+
+<ng-template #characterIcon><i class="anticon anticon-heart"></i></ng-template>
+<ng-template #characterZhLetter>好</ng-template>
+<ng-template #characterEnLetter>A</ng-template>
+
+<!-- 上传图片 -->
+<div class="clearfix">
+  <nz-upload
+    nzAction="https://jsonplaceholder.typicode.com/posts/"
+    nzListType="picture-card"
+    [(nzFileList)]="fileList"
+    [nzShowButton]="fileList.length < 3"
+    [nzPreview]="handlePreview">
+    <i class="anticon anticon-plus"></i>
+    <div class="ant-upload-text">上传</div>
+  </nz-upload>
+  <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null"
+            (nzOnCancel)="previewVisible=false">
+    <ng-template #modalContent>
+      <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }"/>
+    </ng-template>
+  </nz-modal>
+</div>
+
+<!-- 上传图像 限制大小 -->
+<nz-upload class="avatar-uploader"
+           nzAction="https://jsonplaceholder.typicode.com/posts/"
+           nzName="avatar"
+           nzListType="picture-card"
+           [nzShowUploadList]="false"
+           [nzBeforeUpload]="beforeUpload"
+           (nzChange)="handleChange($event)">
+  <ng-container *ngIf="!avatarUrl">
+    <i class="anticon anticon-plus"></i>
+    <div class="ant-upload-text">上传图像</div>
+  </ng-container>
+  <img *ngIf="avatarUrl" [src]="avatarUrl" class="avatar">
+</nz-upload>
