@@ -14,7 +14,7 @@ export class ButtonComponent implements OnInit {
 
   ngOnInit() {
     // 获取路由导航信息
-    console.log(this.routeInfo.snapshot.queryParams['name'])
+    // console.log(this.routeInfo.snapshot.queryParams['name'])
   }
 
 }

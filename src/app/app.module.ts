@@ -30,6 +30,7 @@ import {CascadeComponent} from './component/cascade/cascade.component';
 import {CheckboxComponent} from './component/checkbox/checkbox.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
 import {CardComponent} from './component/card/card.component';
+import {EchartsComponent} from './plugin/echarts/echarts.component';
 
 registerLocaleData(zh);
 
@@ -54,7 +55,8 @@ registerLocaleData(zh);
     CascadeComponent,
     CheckboxComponent,
     CalendarComponent,
-    CardComponent
+    CardComponent,
+    EchartsComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ import {CascadeComponent} from "./component/cascade/cascade.component";
 import {CheckboxComponent} from "./component/checkbox/checkbox.component";
 import {CalendarComponent} from "./component/calendar/calendar.component";
 import {CardComponent} from "./component/card/card.component";
+import {EchartsComponent} from "./plugin/echarts/echarts.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -39,7 +40,8 @@ const routes: Routes = [
       {path: 'cascade', component: CascadeComponent},
       {path: 'checkbox', component: CheckboxComponent},
       {path: 'calendar', component: CalendarComponent},
-      {path: 'card', component: CardComponent}
+      {path: 'card', component: CardComponent},
+      {path: 'charts', component: EchartsComponent}
     ]
   },
   {path: 'login', component: LoginComponent},

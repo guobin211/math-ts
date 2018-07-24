@@ -69,7 +69,11 @@
         <ul>
           <!-- 二级导航 -->
           <li nz-menu-item (click)="goAnother('组件','动画')">
-            <a [routerLink]="['./animate']" [queryParams]="{name: '动画'}">animate</a>
+            <a [routerLink]="['./animate']" [queryParams]="{name: '动画'}">动画</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('组件','图表')">
+            <a [routerLink]="['./charts']" [queryParams]="{name: '图表'}">图表</a>
           </li>
         </ul>
       </li>

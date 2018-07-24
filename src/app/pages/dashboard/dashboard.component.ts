@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
     this.http.get("http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1")
       .subscribe((data) => {
         this.httpData = JSON.parse(data['_body']).result;
-        console.log(this.httpData);
+        // console.log(this.httpData);
       });
 
   }
