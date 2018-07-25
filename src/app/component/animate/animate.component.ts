@@ -4,7 +4,7 @@ import {
   state,
   style,
   animate,
-  transition, useAnimation
+  transition, useAnimation, keyframes
 } from '@angular/animations';
 import {bounce} from "ng-animate";
 @Component({
@@ -12,6 +12,37 @@ import {bounce} from "ng-animate";
   templateUrl: './animate.component.html',
   styleUrls: ['./animate.component.scss'],
   animations: [
+    trigger('rotate', [
+      state('in', style({transform: 'rotateX(0)'})),
+      transition('void => *', [
+        style({transform: 'rotateX(120deg)'}),
+        animate(1000)
+      ]),
+    ]),
+    trigger('rotateY', [
+      state('in', style({transform: 'rotateY(0)', background: '#f08300'})),
+      transition('void => *', [
+        style({transform: 'rotateY(120deg)', background: '#e50c1d'}),
+        animate(2000)
+      ]),
+    ]),
+    trigger('flyIn', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        animate(3000, keyframes([
+          style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
+          style({opacity: 1, transform: 'translateX(15px)', offset: 0.3}),
+          style({opacity: 1, transform: 'translateX(0)', offset: 1.0})
+        ]))
+      ]),
+      transition('* => void', [
+        animate(3000, keyframes([
+          style({opacity: 1, transform: 'translateX(0)', offset: 0}),
+          style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
+          style({opacity: 0, transform: 'translateX(100%)', offset: 1.0})
+        ]))
+      ])
+    ]),
     trigger('bounce', [transition('* => *', useAnimation(bounce, {
       // Set the duration to 5seconds and delay to 2seconds
       params: {timing: 5, delay: 2}

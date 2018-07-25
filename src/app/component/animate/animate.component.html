@@ -3,8 +3,35 @@
      [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 32 }"
      nzJustify="center"
      nzType="flex">
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       [@rotateY]="'in'"
+       *ngIf="isShow"
+       (click)="onLeave()">
+    <span>transition</span>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item" style="background-color: #3b79ff"
+       [@rotate]="'in'"
+       *ngIf="isShow"
+       (click)="onLeave()">
+    <span>transform</span>
+  </div>
 
   <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       style="background-color: #82f8ff">
+    <span>原生动画</span>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       style="background-color: rgba(240,131,0,0.48)"
+       [@flyIn]="'in'"
+       *ngIf="isShow"
+       (click)="onLeave()">
+    <span>Keyframes</span>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
+       style="background-color: rgb(123,199,255)"
        [@bounce]="{ value: bounce, params: { timing: myTiming || 5, delay: myDelay || 2 } }">
     <span>ng-animate</span>
   </div>
@@ -17,10 +44,15 @@
   </div>
 
   <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
-       *ngIf="isShow"
        [@flyInOut]="'in'"
+       *ngIf="isShow"
        (click)="onLeave()">
     <span>进出场动画</span>
   </div>
 
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item">
+    <app-ng-animate></app-ng-animate>
+  </div>
+
 </div>
+
