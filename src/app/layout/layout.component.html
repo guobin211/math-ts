@@ -75,6 +75,15 @@
           <li nz-menu-item (click)="goAnother('组件','图表')">
             <a [routerLink]="['./charts']" [queryParams]="{name: '图表'}">图表</a>
           </li>
+
+          <li nz-menu-item (click)="goAnother('组件','视频')">
+            <a [routerLink]="['./video']" [queryParams]="{name: '视频'}">视频</a>
+          </li>
+
+          <li nz-menu-item (click)="goAnother('组件','校验器')">
+            <a [routerLink]="['./validators']" [queryParams]="{name: '校验器'}">校验器</a>
+          </li>
+
         </ul>
       </li>
 
@@ -162,10 +171,10 @@
           <span>个人信息</span>
         </div>
         <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
-          <span>退出登录</span>
+          <span>设置</span>
         </div>
         <div nz-row class="gutter-box" nzAlign="middle" nzJustify="center" nzType="flex">
-          <span>设置</span>
+          <span>退出登录</span>
         </div>
       </div>
 

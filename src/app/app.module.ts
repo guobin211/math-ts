@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
-import {registerLocaleData} from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {MultiplePipe} from './pipes/multiple.pipe';
 import {LayoutComponent} from './layout/layout.component';
@@ -31,6 +31,14 @@ import {CheckboxComponent} from './component/checkbox/checkbox.component';
 import {CalendarComponent} from './component/calendar/calendar.component';
 import {CardComponent} from './component/card/card.component';
 import {EchartsComponent} from './plugin/echarts/echarts.component';
+import {VideoComponent} from './plugin/video/video.component';
+import {VgCoreModule} from "videogular2/core";
+import {VgControlsModule} from "videogular2/controls";
+import {VgOverlayPlayModule} from "videogular2/overlay-play";
+import {VgBufferingModule} from "videogular2/buffering";
+import {ValidatorsComponent} from './plugin/validators/validators.component';
+import {EchartOptionDirective} from './plugin/echarts/echart-option.directive';
+// import {NgxEchartsModule} from "ngx-echarts";
 
 registerLocaleData(zh);
 
@@ -56,7 +64,10 @@ registerLocaleData(zh);
     CheckboxComponent,
     CalendarComponent,
     CardComponent,
-    EchartsComponent
+    EchartsComponent,
+    VideoComponent,
+    ValidatorsComponent,
+    EchartOptionDirective
   ],
   imports: [
     BrowserModule,
@@ -68,9 +79,16 @@ registerLocaleData(zh);
     HttpModule,
     JsonpModule,
     QuillModule,
-    NgZorroAntdModule
+    BrowserModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    NgZorroAntdModule,
+    // NgxEchartsModule
   ],
-  providers: [{provide: NZ_I18N, useValue: zh_CN}],
+  providers: [{provide: NZ_I18N, useValue: zh_CN},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

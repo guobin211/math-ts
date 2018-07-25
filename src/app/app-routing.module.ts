@@ -19,6 +19,9 @@ import {CheckboxComponent} from "./component/checkbox/checkbox.component";
 import {CalendarComponent} from "./component/calendar/calendar.component";
 import {CardComponent} from "./component/card/card.component";
 import {EchartsComponent} from "./plugin/echarts/echarts.component";
+import {VideoComponent} from "./plugin/video/video.component";
+import {ValidatorsComponent} from "./plugin/validators/validators.component";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -41,7 +44,9 @@ const routes: Routes = [
       {path: 'checkbox', component: CheckboxComponent},
       {path: 'calendar', component: CalendarComponent},
       {path: 'card', component: CardComponent},
-      {path: 'charts', component: EchartsComponent}
+      {path: 'charts', component: EchartsComponent},
+      {path: 'video', component: VideoComponent},
+      {path: 'validators', component: ValidatorsComponent}
     ]
   },
   {path: 'login', component: LoginComponent},
@@ -51,6 +56,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ]
 })
 export class AppRoutingModule { }

@@ -1,6 +1,7 @@
 # 自定义管道
 
-
+  {{ data | multiple }}
+  
 ## 管道名
 
    ```multiple```

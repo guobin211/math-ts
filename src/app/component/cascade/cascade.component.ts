@@ -1,32 +1,32 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Http} from "@angular/http";
-// 静态数据
+
 const options = [{
-  value: '浙江',
-  label: '浙江',
+  value: 'zhejiang',
+  label: 'Zhejiang',
   children: [{
-    value: '杭州',
-    label: '杭州',
+    value: 'hangzhou',
+    label: 'Hangzhou',
     children: [{
-      value: '西湖',
-      label: '西湖',
+      value: 'xihu',
+      label: 'West Lake',
       isLeaf: true
     }]
   }, {
-    value: '宁波',
-    label: '宁波',
+    value: 'ningbo',
+    label: 'Ningbo',
     isLeaf: true
   }]
 }, {
-  value: '江苏',
-  label: '江苏',
+  value: 'jiangsu',
+  label: 'Jiangsu',
   children: [{
-    value: '南京',
-    label: '南京',
+    value: 'nanjing',
+    label: 'Nanjing',
     children: [{
-      value: '中华门',
-      label: '中华门',
+      value: 'zhonghuamen',
+      label: 'Zhong Hua Men',
       isLeaf: true
     }]
   }]
@@ -79,59 +79,56 @@ export class CascadeComponent implements OnInit {
 
   /** init data */
   nzOptions = options;
-
   /** ngModel value */
   public values: any[] = ['zhejiang', 'hangzhou', 'xihu'];
 
   public form: FormGroup;
   provinces = [];
-  city = [];
-  scenicspots = [];
 
   constructor(private fb: FormBuilder, private http: Http) {
-    this.createForm();
   }
 
   ngOnInit() {
     this.http.get('./assets/data/city.json').subscribe((data) => {
       //  所有的城市数组
-      let obj: { value: any; lable: any; children: any };
+      let provin: { value: any; lable: any; children: any };
+      let citys: { value: any; lable: any; children: any };
+      let scens: { value: any; lable: any; isLeaf: true };
       const city = JSON.parse(data['_body']);
 
       // 拿到每个省
       for (let i = 0; i < city.length; i++) {
-        obj = {
+        provin = {
           value: city[i].name,
           lable: city[i].name,
           children: []
         };
-        this.provinces.push(obj);
-
-        let citys = city[i].city;
+        let mycitys = city[i].city;
         // 拿到每个市
-        for (let a = 0; a < citys.length; a++) {
-          obj = {
-            value: citys[a].name,
-            lable: citys[a].name,
+        for (let a = 0; a < mycitys.length; a++) {
+          citys = {
+            value: mycitys[a].name,
+            lable: mycitys[a].name,
             children: []
           };
-          this.city.push(obj);
-
-          let scenicspots = citys[a].area;
+          let scenicspots = mycitys[a].area;
           // 拿到每个区
           for (let i = 0; i < scenicspots.length; i++) {
-            obj = {
+            scens = {
               value: scenicspots[i],
               lable: scenicspots[i],
-              children: []
+              isLeaf: true
             };
-            this.scenicspots.push(obj);
-
+            citys.children.push(scens);
           }
+          provin.children.push(citys);
         }
+        this.provinces.push(provin);
       }
     });
-    // console.log(this.city);
+    console.log(this.provinces);
+
+    this.createForm();
   }
 
   public reset(): void {
