@@ -1,9 +1,11 @@
 # NZ-Admin
 
 ```
-  使用 angular 和 ng-zorro 构建跨平台应用
+  使用 angular 构建跨平台应用 PWA
   
-  特点：
+  特点：模块化，组件化，跨平台，降级式兼容性，一套代码可供多端使用。
+  
+  演示地址：     
 
 ```
 
@@ -12,6 +14,7 @@
 ```
   1.富文本编辑器  ngx-quill
   2.ng-animate  快速动画库 --需要animation.js
+  3.echarts canvas 图表库
 
 ```
 
