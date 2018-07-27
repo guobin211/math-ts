@@ -6,9 +6,14 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+/** 配置 ng-zorro-antd 国际化 **/
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+/** 配置 angular i18n **/
 import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
+
 import {MultiplePipe} from './pipes/multiple.pipe';
 import {LayoutComponent} from './layout/layout.component';
 import {DashboardComponent} from './pages/dashboard/dashboard.component';
@@ -38,9 +43,10 @@ import {VgOverlayPlayModule} from "videogular2/overlay-play";
 import {VgBufferingModule} from "videogular2/buffering";
 import {ValidatorsComponent} from './plugin/validators/validators.component';
 import {EchartOptionDirective} from './plugin/echarts/echart-option.directive';
-// import {NgxEchartsModule} from "ngx-echarts";
+import {NgAnimateComponent} from './component/animate/ng-animate/ng-animate.component';
+import {RouteReuseStrategy} from "@angular/router";
+import {AppRoutingCache} from "./app-routing-cache";
 
-registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -67,7 +73,8 @@ registerLocaleData(zh);
     EchartsComponent,
     VideoComponent,
     ValidatorsComponent,
-    EchartOptionDirective
+    EchartOptionDirective,
+    NgAnimateComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,10 +92,12 @@ registerLocaleData(zh);
     VgOverlayPlayModule,
     VgBufferingModule,
     NgZorroAntdModule,
-    // NgxEchartsModule
+
   ],
-  providers: [{provide: NZ_I18N, useValue: zh_CN},
-    {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [
+    {provide: NZ_I18N, useValue: zh_CN},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: RouteReuseStrategy, useClass: AppRoutingCache}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,5 @@
 import {FormControl, FormGroup} from "@angular/forms";
 
-
 export function mobileValidator(control: FormControl): any {
   let myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
   let valid = myreg.test(control.value);

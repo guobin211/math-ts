@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', component: LayoutComponent, children: [
-      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+      {path: '', redirectTo: 'charts', pathMatch: 'full'},
       // dashboard默认主页  在路由配置中传递data数据
       {path: 'dashboard', component: DashboardComponent, data: [{ulName: '仪表盘'}]},
       // component组件部分
@@ -37,9 +37,9 @@ const routes: Routes = [
       {path: 'steps', component: StepsComponent},
       {path: 'animate', component: AnimateComponent},
       {path: 'feedback', component: FeedbackComponent},
-      {path: 'table', component: TableComponent},
+      {path: 'table', component: TableComponent, data: {keep: true}},
       {path: 'ajaxTable', component: TableajaxComponent},
-      {path: 'quillEdit', component: QuilleditComponent},
+      {path: 'quillEdit', component: QuilleditComponent, data: {keep: true}},
       {path: 'cascade', component: CascadeComponent},
       {path: 'checkbox', component: CheckboxComponent},
       {path: 'calendar', component: CalendarComponent},
@@ -55,7 +55,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+  ],
   exports: [RouterModule],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
