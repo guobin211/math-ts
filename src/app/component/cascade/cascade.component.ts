@@ -126,8 +126,6 @@ export class CascadeComponent implements OnInit {
         this.provinces.push(provin);
       }
     });
-    console.log(this.provinces);
-
     this.createForm();
   }
 
