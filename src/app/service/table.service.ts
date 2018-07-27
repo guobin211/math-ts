@@ -12,7 +12,13 @@ export class TableService {
   constructor(private http: HttpClient) {
   }
 
-  getUsers(pageIndex: number = 1, pageSize: number = 10, sortField: string, sortOrder: string, genders: string[]): Observable<{}> {
+  getUsers(
+    pageIndex: number = 1,
+    pageSize: number = 10,
+    sortField: string,
+    sortOrder: string,
+    genders: string[]
+  ): Observable<{}> {
     // 构造查询参数
     let params = new HttpParams()
       .append('page', `${pageIndex}`)
@@ -24,8 +30,6 @@ export class TableService {
     });
     //  拼接请求地址实例
     //  https://api.randomuser.me/?page=5&results=10&sortField=email&sortOrder=ascend&gender=male
-    //  响应
-    //  {results: [{gender: "male", name: {title: "mr", first: "tristan", last: "mitchell"},…},…],…}
     return this.http.get(`${this.randomUserUrl}`, {
       params
     });

@@ -5,21 +5,34 @@ import {Injectable} from '@angular/core';
 })
 export class StorageService {
 
+  public localStorage: any;
   constructor() {
+    if (!localStorage) {
+      throw new Error('不支持localStorage');
+    }
+    this.localStorage = localStorage;
+
   }
 
-  // 存储
-  setItem(key: string, value) {
-    localStorage.setItem(key, JSON.stringify(value))
+  public setData(key: string, value): void {
+    localStorage.setItem(key, JSON.stringify(value));
   }
 
-  // 查询
-  getItem(key: string) {
+  public getData(key: string): any {
     return JSON.parse(localStorage.getItem(key));
   }
 
-  // 删除
-  removeItem(key: string) {
+  public setObject(key: string, value: any): void {
+    this.localStorage[key] = JSON.stringify(value);
+  }
+
+  public getObject(key: string): any {
+    return JSON.parse(this.localStorage[key] || '{}');
+  }
+
+  // 删除数据
+  public remove(key: string): any {
     localStorage.removeItem(key);
   }
+
 }
