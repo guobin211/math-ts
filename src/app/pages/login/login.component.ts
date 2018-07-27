@@ -19,8 +19,11 @@ export class LoginComponent implements OnInit {
     _username: 'admin',
     _password: 'admin'
   };
+  isLogin = false;
 
-  constructor(private fb: FormBuilder, private route: Router, private storage: StorageService) {
+  constructor(private fb: FormBuilder,
+              private route: Router,
+              private storage: StorageService,) {
   }
 
   submitForm(): void {
@@ -28,11 +31,18 @@ export class LoginComponent implements OnInit {
       this.validateForm.controls[i].markAsDirty();
       this.validateForm.controls[i].updateValueAndValidity();
     }
-
-    if (this.checkLogin._username == this.validateForm.value.userName && this.checkLogin._password == this.validateForm.value.password && this.validateForm.value.remember) {
-      this.route.navigate(['./home']);
-      // 存储用户信息
-      this.storage.setItem('userInfo', this.validateForm.value);
+    if (this.checkLogin._username == this.validateForm.value.userName
+      && this.checkLogin._password == this.validateForm.value.password) {
+      if (this.validateForm.value.remember) {
+        // 存储用户信息
+        this.storage.setData('userInfo', this.validateForm.value);
+        this.route.navigate(['./home']);
+        this.isLogin = true;
+      } else {
+        this.storage.remove('userInfo');
+        this.route.navigate(['./home']);
+        this.isLogin = true;
+      }
     }
   }
 
