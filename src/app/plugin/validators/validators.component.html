@@ -1,0 +1,53 @@
+<div nz-row>
+  <form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group
+          nzPrefixIcon="anticon anticon-user">
+          <input
+            formControlName="userName"
+            nz-input
+            placeholder="用户名">
+        </nz-input-group>
+        <nz-form-explain
+          *ngIf="validateForm.get('userName').dirty && validateForm.get('userName').errors">
+          请输入大于6位数的用户名!
+        </nz-form-explain>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="!validateForm.valid">用户名</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
+
+<div nz-row>
+  <form nz-form [nzLayout]="'inline'" [formGroup]="mobileForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group
+          nzPrefixIcon="anticon anticon-phone">
+          <input
+            nz-input
+            placeholder="手机号"
+            formControlName="mobile">
+        </nz-input-group>
+      </nz-form-control>
+      <nz-form-explain
+        *ngIf="mobileForm.get('mobile').dirty && mobileForm.get('mobile').errors">
+        请输入手机号!
+      </nz-form-explain>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="!mobileForm.valid">手机号</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
+
+
