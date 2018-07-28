@@ -1,7 +1,17 @@
 # 中后台前端应用框架
   演示地址 <http://www.guobin211.com/nz-admin/>
-  服务端： ng-express-serve
-  小程序： ng-wx-apps
+  
+### 测试状况：（**：通过；--：未测试；xx：不支持。）
+  ** Chrome：版本 67.0.3396.99（正式版本） （64 位）
+  ** Safari： 浏览器版本 11.0.3 (13604.5.6)
+  ** Firefox：61.0.1 (64 位)
+  ** 微信： 6.6.7
+  -- IE：   未测试
+  ** 手机百度：10.10.0.12   
+  xx 手机QQ浏览器 X5内核：  不支持
+  
+  <服务端： ng-express-serve>
+  <小程序： ng-wx-apps>
   
 ### Feature
 ```

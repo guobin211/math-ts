@@ -1,6 +1,8 @@
 {
-  "name": "ng-antd-admin",
-  "version": "0.0.0",
+  "name": "NZ-Admin",
+  "description": "Angular跨平台前端组件库,快速开发中后台项目,快速构建移动端项目",
+  "version": "0.0.1",
+  "author": "guobin201314@gmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
     "@types/echarts": "0.0.13",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "echarts": "^4.1.0",
     "ng-animate": "^0.3.3",
