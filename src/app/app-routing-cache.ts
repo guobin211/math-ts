@@ -11,7 +11,7 @@ export class AppRoutingCache implements RouteReuseStrategy {
   // 表示对路由允许复用
   public shouldDetach(route: ActivatedRouteSnapshot): boolean {
     // 默认对所有路由复用
-    // 通过给路由配置项增加 data:{ keep: false } 来进行启用
+    // 通过给路由配置项增加 data:{ keep: true } 来进行启用
     if (route.data.keep) {
       return true;
     }

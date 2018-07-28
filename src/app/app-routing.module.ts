@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', component: LayoutComponent, children: [
-      {path: '', redirectTo: 'charts', pathMatch: 'full'},
+      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       // dashboard默认主页  在路由配置中传递data数据
       {path: 'dashboard', component: DashboardComponent, data: [{ulName: '仪表盘'}]},
       // component组件部分
