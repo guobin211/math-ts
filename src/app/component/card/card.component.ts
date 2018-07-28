@@ -15,7 +15,6 @@ export class CardComponent implements OnInit {
   isOkLoading = false;
   modalTitle;
   modalContent = [];
-
   constructor(private http: Http, private nzMessageService: NzMessageService) {
   }
 
@@ -23,9 +22,7 @@ export class CardComponent implements OnInit {
     this.http.get(this.url).subscribe(
       (data) => {
         /** data 响应体 **/
-        console.log(data);
         this.newsData = JSON.parse(data['_body']).result.data;
-        console.log(this.newsData);
       },
       () => {
       },
