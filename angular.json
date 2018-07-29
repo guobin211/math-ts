@@ -28,10 +28,13 @@
             ],
             "styles": [
               "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+              "src/assets/editor.md/css/editormd.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/echarts/dist/echarts.min.js"
+              "node_modules/echarts/dist/echarts.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/editor.md/editormd.min.js"
             ]
           },
           "configurations": {

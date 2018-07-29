@@ -46,6 +46,9 @@
     组件: app-video
     指令： vg-player
     数据： srcData: string
+  5.editor-md插件 
+    静态资源
+    增加 assets/editor.md/ 文件夹内为markdown插件资源
     
 ```
 ## 结构
