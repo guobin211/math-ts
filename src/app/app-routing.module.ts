@@ -22,6 +22,8 @@ import {EchartsComponent} from "./plugin/echarts/echarts.component";
 import {VideoComponent} from "./plugin/video/video.component";
 import {ValidatorsComponent} from "./plugin/validators/validators.component";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {ChinacityComponent} from "./component/chinacity/chinacity.component";
+import {EditormdComponent} from "./plugin/editormd/editormd.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -40,7 +42,9 @@ const routes: Routes = [
       {path: 'table', component: TableComponent, data: {keep: true}},
       {path: 'ajaxTable', component: TableajaxComponent},
       {path: 'quillEdit', component: QuilleditComponent, data: {keep: true}},
+      {path: 'editorMd', component: EditormdComponent, data: {keep: true}},
       {path: 'cascade', component: CascadeComponent},
+      {path: 'city', component: ChinacityComponent},
       {path: 'checkbox', component: CheckboxComponent},
       {path: 'calendar', component: CalendarComponent},
       {path: 'card', component: CardComponent},

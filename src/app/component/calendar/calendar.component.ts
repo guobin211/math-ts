@@ -26,11 +26,14 @@ export class CalendarComponent implements OnInit {
       {type: 'error', content: 'This is error event 4.'}
     ]
   };
-
+  date;
+  mode = 'month';
   constructor() {
   }
 
   ngOnInit() {
+    this.date = new Date();
+    console.log(this.date);
   }
 
 

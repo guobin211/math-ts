@@ -107,6 +107,10 @@
             <a [routerLink]="['./cascade']" [queryParams]="{name: '层联选择'}">层联选择</a>
           </li>
 
+          <li nz-menu-item (click)="goAnother('表单','全国城市')">
+            <a [routerLink]="['./city']" [queryParams]="{name: '全国城市'}">全国城市</a>
+          </li>
+
           <li nz-menu-item (click)="goAnother('表单','多选框')">
             <a [routerLink]="['./checkbox']" [queryParams]="{name: '多选框'}">多选框</a>
           </li>
@@ -144,6 +148,9 @@
           <!-- 二级导航 -->
           <li nz-menu-item (click)="goAnother('编辑器','quill')">
             <a [routerLink]="['./quillEdit']" [queryParams]="{name: 'quill'}">quill</a>
+          </li>
+          <li nz-menu-item (click)="goAnother('编辑器','Markdown')">
+            <a [routerLink]="['./editorMd']" [queryParams]="{name: 'Markdown'}">Markdown</a>
           </li>
         </ul>
       </li>

@@ -3,7 +3,7 @@
   <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
     <!-- 编辑器 -->
     <quill-editor [(ngModel)]="editData"
-                  [style]="{height: '400px',padding: '5px'}"
+                  [style]="{height: '300px',padding: '5px'}"
                   [placeholder]="placeholderText"
                   [maxLength]="maxLengthNum"
                   [minLength]="minLengthNum"
@@ -99,7 +99,7 @@
   </div>
   <!-- 数据展示 -->
   <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12">
-    <div style="margin: 3px; border: 1px solid #cccccc;height: 450px">
+    <div style="margin: 3px; border: 1px solid #cccccc;height: 300px">
       <h3>即时显示：</h3>
       {{editData}}
     </div>

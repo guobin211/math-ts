@@ -63,7 +63,6 @@ export class TableComponent implements OnInit {
       });
     }
   }
-
   // 表格内容为空
   noResultChange(status: boolean): void {
     this.dataSet = [];
@@ -71,7 +70,6 @@ export class TableComponent implements OnInit {
       this.ngOnInit();
     }
   }
-
   addDate() {
     let i = 100;
     // 增加数据
@@ -83,9 +81,7 @@ export class TableComponent implements OnInit {
     }];
     i++;
   }
-
   delete(i) {
-    // console.log(i);
     // 删除数据
     this.dataSet = this.dataSet.filter(data => data.key !== i);
   }

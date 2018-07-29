@@ -1,7 +1,6 @@
 <nz-calendar>
 
   <ul *nzDateCell="let date" class="events">
-
     <ng-container [ngSwitch]="date.getDate()">
       <ng-container *ngSwitchCase="8">
         <li *ngFor="let item of listDataMap.eight">
@@ -19,12 +18,15 @@
         </li>
       </ng-container>
     </ng-container>
-
   </ul>
   <ng-container *nzMonthCell="let month">
     <div *ngIf="getMonthData(month) as monthData" class="notes-month">
-      <section>{{ monthData }}</section>
-      <span>Backlog number</span>
+      <section>
+        信息
+      </section>
+      <span></span>
     </div>
   </ng-container>
+
 </nz-calendar>
+<!-- 传入 TemplateRef 的方式 -->

@@ -1,0 +1,8 @@
+<!-- 全国城市  -->
+<form [formGroup]="form" novalidate>
+  <nz-cascader
+    [nzOptions]="nzOptions"
+    (nzChange)="onChanges($event)"
+    [formControlName]="'name'">
+  </nz-cascader>
+</form>

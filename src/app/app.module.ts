@@ -6,14 +6,10 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-/** 配置 ng-zorro-antd 国际化 **/
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
-/** 配置 angular i18n **/
 import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
-
 registerLocaleData(zh);
-
 import {MultiplePipe} from './pipes/multiple.pipe';
 import {LayoutComponent} from './layout/layout.component';
 import {DashboardComponent} from './pages/dashboard/dashboard.component';
@@ -46,6 +42,9 @@ import {EchartOptionDirective} from './plugin/echarts/echart-option.directive';
 import {NgAnimateComponent} from './component/animate/ng-animate/ng-animate.component';
 import {RouteReuseStrategy} from "@angular/router";
 import {AppRoutingCache} from "./app-routing-cache";
+import { ChinacityComponent } from './component/chinacity/chinacity.component';
+import { EditormdComponent } from './plugin/editormd/editormd.component';
+import { EditorMdDirective } from './plugin/editormd/editor-md.directive';
 
 
 @NgModule({
@@ -70,11 +69,14 @@ import {AppRoutingCache} from "./app-routing-cache";
     CheckboxComponent,
     CalendarComponent,
     CardComponent,
-    EchartsComponent,
     VideoComponent,
     ValidatorsComponent,
+    EchartsComponent,
     EchartOptionDirective,
     NgAnimateComponent,
+    ChinacityComponent,
+    EditormdComponent,
+    EditorMdDirective,
   ],
   imports: [
     BrowserModule,
@@ -92,7 +94,6 @@ import {AppRoutingCache} from "./app-routing-cache";
     VgOverlayPlayModule,
     VgBufferingModule,
     NgZorroAntdModule,
-
   ],
   providers: [
     {provide: NZ_I18N, useValue: zh_CN},
