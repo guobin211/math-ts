@@ -1,0 +1,21 @@
+<div nz-row align="middle" justify="center" style="margin: 5px 0">
+  <div nz-col nzXs="8" nzSm="8" nzMd="6" nzLg="4" nzXl="2">
+    <button nz-button nzSize="default" nzType="primary" (click)="doSubmit()">submit</button>
+  </div>
+</div>
+<div nz-row>
+  <div
+    id="md"
+    appEditorMd
+    [editormdConfig]="conf"
+    (onEditorChange)="syncModel($event)">
+  <textarea
+    style="display: block;"
+    [(ngModel)]="markdown">
+  </textarea>
+  </div>
+  <hr>
+  <h2>Markdown内容:</h2>
+  <span>{{markdown}}</span>
+</div>
+
