@@ -5,7 +5,10 @@
     <form nz-form nzLayout="inline">
 
       <nz-form-item>
+        <button nz-button="" color="primary" (click)="exportTable('table-hooks', 'test')">导出excel</button>
+      </nz-form-item>
 
+      <nz-form-item>
         <nz-form-label>
           <label>边框</label>
         </nz-form-label>
@@ -123,6 +126,7 @@
   </div>
 
   <nz-table
+    id="table-hooks"
     #dynamicTable
     (nzCurrentPageDataChange)="currentPageDataChange($event)"
     [nzScroll]="fixHeader?{ y: '240px' }:null"
