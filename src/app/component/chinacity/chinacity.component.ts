@@ -2554,6 +2554,7 @@ export class ChinacityComponent implements OnInit {
   }
   public onChanges(values: any): void {
     console.log(values);
+    console.log(this.form);
   }
   ngOnInit() {
 

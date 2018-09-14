@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-  srcData: string;
 
+  srcData: string;
   constructor() {
   }
 

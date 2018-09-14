@@ -13,23 +13,19 @@ export class StorageService {
     this.localStorage = localStorage;
 
   }
-
   public setData(key: string, value): void {
     localStorage.setItem(key, JSON.stringify(value));
   }
-
   public getData(key: string): any {
     return JSON.parse(localStorage.getItem(key));
   }
-
-  public setObject(key: string, value: any): void {
-    this.localStorage[key] = JSON.stringify(value);
-  }
-
-  public getObject(key: string): any {
-    return JSON.parse(this.localStorage[key] || '{}');
-  }
-
+  // public setObject(key: string, value: any): void {
+  //   this.localStorage[key] = JSON.stringify(value);
+  // }
+  //
+  // public getObject(key: string): any {
+  //   return JSON.parse(this.localStorage[key] || '{}');
+  // }
   // 删除数据
   public remove(key: string): any {
     localStorage.removeItem(key);

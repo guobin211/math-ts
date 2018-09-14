@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private routeInfo: ActivatedRoute, private http: Http) {
   }
-
+  size = 'large';
   ngOnInit() {
     // '仪表盘'
     this.routeMsg = this.routeInfo.data['_value'][0].ulName;

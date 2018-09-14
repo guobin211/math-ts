@@ -106,7 +106,6 @@ export class EchartsComponent implements OnInit {
       }
     ]
   };
-
   lineChart = {
     title: {
       text: '月访问趋势图',
@@ -151,7 +150,7 @@ export class EchartsComponent implements OnInit {
           color: '#fff',
           backgroundColor: '#999',
           borderRadius: 3,
-          padding: [3, 5]
+          padding: [1, 1]
         }
       },
       indicator: [

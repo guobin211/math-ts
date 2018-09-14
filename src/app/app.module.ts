@@ -45,6 +45,8 @@ import {AppRoutingCache} from "./app-routing-cache";
 import { ChinacityComponent } from './component/chinacity/chinacity.component';
 import { EditormdComponent } from './plugin/editormd/editormd.component';
 import { EditorMdDirective } from './plugin/editormd/editor-md.directive';
+import { NgxEchartsComponent } from './plugin/ngx-echarts/ngx-echarts.component';
+import {NgxEchartsModule} from "ngx-echarts";
 
 
 @NgModule({
@@ -77,6 +79,7 @@ import { EditorMdDirective } from './plugin/editormd/editor-md.directive';
     ChinacityComponent,
     EditormdComponent,
     EditorMdDirective,
+    NgxEchartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,6 +97,7 @@ import { EditorMdDirective } from './plugin/editormd/editor-md.directive';
     VgOverlayPlayModule,
     VgBufferingModule,
     NgZorroAntdModule,
+    NgxEchartsModule
   ],
   providers: [
     {provide: NZ_I18N, useValue: zh_CN},

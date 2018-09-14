@@ -3,6 +3,10 @@
   <nz-cascader
     [nzOptions]="nzOptions"
     (nzChange)="onChanges($event)"
-    [formControlName]="'name'">
+    [formControlName]="'name'"
+    [nzPlaceHolder]="'全国城市'">
   </nz-cascader>
 </form>
+<h3 *ngIf="form.value">
+  {{form.value.name}}
+</h3>

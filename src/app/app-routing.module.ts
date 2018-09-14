@@ -24,6 +24,7 @@ import {ValidatorsComponent} from "./plugin/validators/validators.component";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {ChinacityComponent} from "./component/chinacity/chinacity.component";
 import {EditormdComponent} from "./plugin/editormd/editormd.component";
+import {NgxEchartsComponent} from "./plugin/ngx-echarts/ngx-echarts.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -50,7 +51,8 @@ const routes: Routes = [
       {path: 'card', component: CardComponent},
       {path: 'charts', component: EchartsComponent},
       {path: 'video', component: VideoComponent},
-      {path: 'validators', component: ValidatorsComponent}
+      {path: 'validators', component: ValidatorsComponent},
+      {path: 'ngxcharts', component: NgxEchartsComponent}
     ]
   },
   {path: 'login', component: LoginComponent},

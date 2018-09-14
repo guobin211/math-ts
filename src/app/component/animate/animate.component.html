@@ -31,12 +31,6 @@
   </div>
 
   <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
-       style="background-color: rgb(123,199,255)"
-       [@bounce]="{ value: bounce, params: { timing: myTiming || 5, delay: myDelay || 2 } }">
-    <span>ng-animate</span>
-  </div>
-
-  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="8" nzXl="6" class="animate-item"
        *ngFor="let item of data; let i = index;"
        [@changeState]="item.state"
        (click)="toggleState(item)">

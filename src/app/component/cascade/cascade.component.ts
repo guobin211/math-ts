@@ -4,7 +4,7 @@ import {Http} from "@angular/http";
 import {Citys} from "../../class/citys";
 import {Observable} from "rxjs/index";
 
-/** 固定城市数据 **/
+//  固定城市数据
 const cityOptions = [
   {
     value: '北京市',
@@ -241,13 +241,9 @@ const cityOptions = [
 })
 export class CascadeComponent implements OnInit {
 
-  /** init data */
+  // init data
   nzOptions = cityOptions;
-
   public form: FormGroup;
-
-  provinces: Observable<Citys>;
-
   public all = [];
   constructor(private fb: FormBuilder, private http: Http) {
   }
@@ -289,7 +285,7 @@ export class CascadeComponent implements OnInit {
         }
         this.all.push(provin);
       }
-      console.log(this.all);
+      // console.log(this.all);
     });
 
     this.createForm();
