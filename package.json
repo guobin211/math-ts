@@ -1,12 +1,12 @@
 {
-  "name": "NZ-Admin",
-  "description": "Angular跨平台前端组件库,快速开发中后台项目,快速构建移动端项目",
+  "name": "gui",
+  "description": "轻便的ui库",
   "version": "0.0.1",
   "author": "guobin201314@gmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,18 +22,8 @@
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
-    "@types/echarts": "0.0.13",
-    "@types/jquery": "^3.3.5",
-    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
-    "echarts": "^4.1.0",
-    "jquery": "^3.3.1",
-    "ng-animate": "^0.3.3",
-    "ng-zorro-antd": "^1.1.1",
-    "ngx-quill": "^3.3.0",
     "rxjs": "^6.0.0",
-    "videogular2": "^6.3.0",
-    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
