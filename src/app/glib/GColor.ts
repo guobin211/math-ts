@@ -1,6 +1,7 @@
 export class GColor {
 
-  constructor(){}
+  constructor () {
+  }
   static getColor(num: number, col?: Array<string>): Array<string> {
     const colors = [
       '#F8D800', '#0396FF', '#EA5455', '#7367F0', '#32CCBC', '#F6416C', '#28C76F', '#9F44D3', '#623AA2', '#F55555',
@@ -23,10 +24,9 @@ export class GColor {
   /**
    * 生成16进制随机颜色
    */
-  static randomColor(): string{
-    return  '#' + (function(color){
-      return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)])
-      && (color.length == 6) ?  color : arguments.callee(color);
+  static randomColor (): string {
+    return '#' + (function (color) {
+      return (color +=  '0123456789abcdef'[Math.floor(Math.random()*16)]) && (color.length === 6) ? color : arguments.callee(color);
     })('');
   }
   /**
@@ -44,11 +44,11 @@ export class GColor {
    */
   static rgbColor() {
     // 随机生成 rgb 值，每个颜色值在 0 - 255 之间
-    var r = GColor.random(0, 256),
+    const r = GColor.random(0, 256),
         g = GColor.random(0, 256),
         b = GColor.random(0, 256);
     // 连接字符串的结果
-    var result = "rgb("+ r +","+ g +","+ b +")";
+    const result = 'rgb(' + r + ',' + g + ',' + b + ')';
     // 返回结果
     return result;
   }
