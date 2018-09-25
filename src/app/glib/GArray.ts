@@ -100,7 +100,7 @@ export class GArray {
       arr = arr.slice(1);
     }
     return arr;
-  };
+  }
 
   /**
    * 通过比较函数比较两个数组的差异
