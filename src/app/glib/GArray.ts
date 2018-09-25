@@ -153,25 +153,24 @@ export class GArray {
   static everyNth = (arr:Array<any>, nth: number) => arr.filter((e, i) => i % nth === nth - 1);
 
   /**
+   * 初始化一个二维数组
+   * @param w 长度
+   * @param h 行
+   * @param val 值
+   */
+  static initArray = (w: number, h: number, val: any) => {
+    // @ts-ignore
+    Array.from({ length: h }).map(() => Array.from({ length: w }).fill(val));
+  }
+
+  /**
    * 数组分块
    * @param arr
    * @param size
    */
   static chunk (arr: Array<any>, size: number): Array<any> {
     // @ts-ignore
-    const reArr = Array.from({length: Math.ceil(arr.length / size)}, (v: number, i: number) => arr.slice(i * size, i * size + size));
-    return reArr;
-  }
-
-  /**
-   * 初始化一个二维数组
-   * @param w 长度
-   * @param h 行
-   * @param val 值
-   */
-  static initialize2DArray = (w: number, h: number, val: any) => {
-    // @ts-ignore
-    Array.from({ length: h }).map(() => Array.from({ length: w }).fill(val));
+    return Array.from({length: Math.ceil(arr.length / size)}, (v: number, i: number) => arr.slice(i * size, i * size + size));
   }
 
 }
