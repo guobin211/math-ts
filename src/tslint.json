@@ -7,6 +7,8 @@
             "app",
             "camelCase"
         ],
+      "no-unused-expression": false,
+      "no-arg": false,
         "component-selector": [
             true,
             "element",
