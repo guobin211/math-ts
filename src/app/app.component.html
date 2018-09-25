@@ -1,9 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <button type="button" class="btn btn-dark">bootstrap</button>
-</div>
-<app-lodash></app-lodash>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar content -->
+    <a class="navbar-brand">Gui</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link">组件<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">插件</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            详情
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item">github</a>
+            <a class="dropdown-item">日志</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">主页</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="查询" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="button">搜索</button>
+      </form>
+    </div>
+  </nav>
+<!--<app-lodash></app-lodash>-->
 <router-outlet></router-outlet>
