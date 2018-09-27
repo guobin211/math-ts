@@ -3,7 +3,15 @@
   * 一套通用的函数式编程库  g-lib
   * 多种在angular中使用第三方库的方式
   * Rx 响应式编程常用操作
-  
+
+## 启动命令与打包
+```js
+   npm run start 
+   // 后台： localhost:3000
+   // ng： localhost:4200
+   npm run build
+```
+
 ## 目录结构
 
 ```js
