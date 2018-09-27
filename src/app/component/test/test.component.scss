@@ -11,3 +11,16 @@
   width: 100%;
   padding-left: 15px;
 }
+
+.bg-inline {
+  display: flex;
+  flex-direction: row;
+  .avatar {
+    display: block;
+    width: 279px;
+    height: 264px;
+    //  dom背景图设置
+    background: url("../../../assets/images/avatar01_01.jpg") no-repeat;
+    background-size: 279px 264px;
+  }
+}
