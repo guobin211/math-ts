@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <h2>Rxjs响应式编程</h2>
+    <ul>
+      <li>
+        <button type="button" class="btn btn-primary" (click)="onClick($event)">事件监听</button>
+      </li>
+      <li>
+        发布：<input type="text" id="input-hooks" (input)="onInput($event)">
+        订阅：<input type="text" [placeholder]="subscription" [value]="subscription">
+      </li>
+      <li>
+        <button type="button" class="btn btn-primary" (click)="onBuild()">创建响应流</button>
+      </li>
+      <li>
+        <button type="button" class="btn btn-primary">转换操作符</button>
+      </li>
+      <li>
+        <button type="button" class="btn btn-primary">导入excel</button>
+        <div class="input-group-text">
+          <input type="file" class="form-control-file" placeholder="选择文件" (change)="doUpload($event)">
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
