@@ -1,0 +1,48 @@
+<div class="table-page">
+  <button type="button" class="btn btn-primary" (click)="saveExcel('table-bordered', '测试')">下载</button>
+  <a style="visibility: hidden" id="download">下载</a>
+  <button type="button" class="btn btn-primary" (click)="upload()">上传表格</button>
+  <input type="file" id="upload-hook" style="display: none" (change)="loadFile($event)">
+  <table class="table-bordered" id="table-bordered">
+    <thead class="table-dark">
+    <tr class="table">
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+      <th>序号</th>
+      <th>标题</th>
+    </tr>
+    </thead>
+    <tbody class="table">
+    <tr *ngFor="let e of dataSet;let i = index;">
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+      <td>{{i}}</td>
+      <td>{{e.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
