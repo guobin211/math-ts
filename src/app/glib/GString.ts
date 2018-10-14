@@ -1,4 +1,4 @@
-export class G {
+export class GString {
   constructor () {
   }
 }

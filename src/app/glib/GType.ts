@@ -1,3 +1,3 @@
-export class G {
+export class GType {
   constructor() {}
 }
