@@ -4,12 +4,9 @@ import {catchError} from 'rxjs/operators';
 import {Observable, throwError} from 'rxjs';
 import {Config} from 'protractor';
 import {Params} from '@angular/router';
+import {OauthService} from './oauth.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': 'my-auth-token'
-  }),
-};
+
 const option = {
   headers: new HttpHeaders({
     'Authorization': 'my-auth-token'
@@ -19,11 +16,21 @@ const option = {
   providedIn: 'root'
 })
 export class HttpClientService {
+  httpOptions: Object;
+  token;
   // api配置
   private config = {
-    'api': 'http://localhost:3000/api/', 'token': 'username-admin-token'
+    'api': 'http://localhost:3000/api/'
   };
-  constructor(private http: HttpClient) { }
+
+  constructor (private http: HttpClient, private oauth: OauthService) {
+    this.token = this.oauth.getToken();
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': this.token
+      }),
+    };
+  }
 
   /**
    * postForm
@@ -48,7 +55,7 @@ export class HttpClientService {
    * @param body
    */
   postData (url, body: string): Observable<any> {
-    return this.http.post(this.config.api + url, body, httpOptions)
+    return this.http.post(this.config.api + url, body, this.httpOptions)
       .pipe(// map( res => res['_body']),
         catchError(this.handleError));
   }
@@ -62,7 +69,7 @@ export class HttpClientService {
     if (params) {
       const options = {
         headers: new HttpHeaders({
-          'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': 'my-auth-token'
+          'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': this.token
         }), params: params,
       };
       return this.http.get(this.config.api + url, options);
