@@ -11,14 +11,15 @@ import {TestComponent} from './component/test/test.component';
 import {HomeComponent} from './page/home/home.component';
 import {MissComponent} from './page/miss/miss.component';
 import {RxjsComponent} from './component/rxjs/rxjs.component';
+import {GchartComponent} from './component/gchart/gchart.component';
+import {TableComponent} from './page/table/table.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LodashComponent,
-    TestComponent,
-    HomeComponent, MissComponent, RxjsComponent
+    TestComponent, HomeComponent, MissComponent, RxjsComponent, GchartComponent, TableComponent
   ],
   imports: [
     BrowserModule,
