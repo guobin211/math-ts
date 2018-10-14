@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../service/http.service';
 import {HttpClientService} from '../../service/httpclient.service';
+import {OauthService} from '../../service/oauth.service';
 
 @Component({
   selector: 'app-test',
@@ -12,10 +13,13 @@ export class TestComponent implements OnInit {
   private responseHeaders;
   // http响应type
   private contentType;
-  constructor(private http: HttpService, private client: HttpClientService) {
+
+  constructor (private http: HttpService, private oauth: OauthService, private client: HttpClientService) {
   }
 
   ngOnInit() {
+    const s = this.oauth.getToken();
+    console.log(s);
     // this.client.getData('aaa').subscribe( res => {
     //   console.log(res);
     // });
