@@ -11,6 +11,9 @@
    // ng： localhost:4200
    npm run build
 ```
+## ng-zorro 模式
+
+### 使用ng-zorro的框架 使用ng-alain库
 
 ## 目录结构
 
