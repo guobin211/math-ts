@@ -2804,8 +2804,9 @@ function nodeName( elem, name ) {
 
   return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 
-};
-var rsingleTag = ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
+}
+
+  var rsingleTag = (/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i);
 
 
 
@@ -8136,7 +8137,7 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 		}
 	};
 	if ( !support.checkOn ) {
-		jQuery.valHooks[ this ].get = function( elem ) {
+    Ajax.get = function (elem) {
 			return elem.getAttribute( "value" ) === null ? "on" : elem.value;
 		};
 	}

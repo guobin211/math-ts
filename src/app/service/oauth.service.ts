@@ -16,6 +16,9 @@ export class OauthService {
     };
   }
 
+  /**
+   * 获取token
+   */
   public getToken () {
     const arr: Array<string> = this.user.username.split('');
     const day = new Date().getDate();

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../service/http.service';
 import {HttpClientService} from '../../service/httpclient.service';
 import {OauthService} from '../../service/oauth.service';
+import {Observable, Observer, of} from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -13,7 +14,8 @@ export class TestComponent implements OnInit {
   private responseHeaders;
   // http响应type
   private contentType;
-
+  msg: Observable<string> = of('获取短信验证码');
+  canPost = true;
   constructor (private http: HttpService, private oauth: OauthService, private client: HttpClientService) {
   }
 
@@ -43,7 +45,12 @@ export class TestComponent implements OnInit {
     //   console.log(res);
     // });
 
-
   }
 
+  getVerificationCode () {
+    this.msg = new Observable<string>((observer: Observer<string>) => {
+      this.canPost = false;
+      observer.next('正在获取验证码...');
+    });
+  }
 }

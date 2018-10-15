@@ -15,6 +15,11 @@
 
 ### 使用ng-zorro的框架 使用ng-alain库
 
+## 图表库
+    antv-g2
+    viser
+    echarts
+    ngx-echarts
 ## 目录结构
 
 ```js
