@@ -2,32 +2,22 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
-import {CoreModule} from './core/core.module';
-import {SharedModule} from './shared/shared.module';
-
 import {AppComponent} from './app.component';
-import {LodashComponent} from './three/lodash/lodash.component';
-import {TestComponent} from './component/test/test.component';
-import {HomeComponent} from './page/home/home.component';
-import {MissComponent} from './page/miss/miss.component';
-import {RxjsComponent} from './component/rxjs/rxjs.component';
-import {GchartComponent} from './component/gchart/gchart.component';
-import {TableComponent} from './page/table/table.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {registerLocaleData} from '@angular/common';
+import zh from '@angular/common/locales/zh';
 
+registerLocaleData(zh);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LodashComponent,
-    TestComponent, HomeComponent, MissComponent, RxjsComponent, GchartComponent, TableComponent
+  declarations: [AppComponent
   ],
   imports: [
-    BrowserModule,
-    CoreModule,
-    SharedModule,
-    AppRoutingModule
-  ],
-  providers: [],
+    BrowserModule, AppRoutingModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule
+  ], providers: [{provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
