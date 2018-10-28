@@ -3,19 +3,25 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
-import {RouterModule} from '@angular/router';
+import {NavComponent} from './nav/nav.component';
+import {HomeComponent} from './home/home.component';
+import {AboutComponent} from './about/about.component';
+import {HomeChildComponent} from './home-child/home-child.component';
+import {DetailComponent} from './detail/detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    HomeChildComponent,
+    DetailComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    RouterModule
+    BrowserModule.withServerTransition({appId: 'gui'}),
   ],
   providers: [],
   bootstrap: [AppComponent]
