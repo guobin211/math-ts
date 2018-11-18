@@ -2,10 +2,6 @@
 
 > description
 
-    Using Typescript Analysis data
-    Using Typescript build web application
-    Using Typescript build node server
-    Using Typescript Realization of mathematical calculation
 
 
 ----------------------
@@ -42,9 +38,3 @@
 
 ----------------------
 ### Reference
-    
-    ES6
-    JAVA
-    Node
-    lodash
-    lambda
