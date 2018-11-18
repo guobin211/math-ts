@@ -1,8 +1,37 @@
-# Typescript 数据结构与算法
+# Typescript Tool library
 
-    用简单的方法理解数据结构
+    A library of data manipulation and processing for JS platform
     
-### 参考 java 算法
+### Use
+
+    npm i math-ts --save
+
+```typescript
+
+    import * as math from 'math-ts'; 
+    const arr = [1, 2, 3, 4];
+    arr.chunk(2);   // [[1,2],[3,4]]
+        
+```
 
 
-### 目录结构
+### package list
+
+    array
+    collection
+    date
+    function
+    graph
+    hashmap
+    heap
+    io
+    linked
+    math
+    number
+    object
+    queues
+    sort
+    stacks
+    string
+    typeof
+    utils

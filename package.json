@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "author": "guobin201314@gmail.com",
   "license": "MIT",
-  "description": "",
-  "repository": "",
+  "description": "typescript data structure and math",
+  "repository": "https://github.com/eloven/math-ts",
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
