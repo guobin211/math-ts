@@ -1,4 +1,50 @@
-# math-ts Typescript的数据结构与算法
+# math-ts Typescript
 
-    使用typescript
+> description
 
+    Using Typescript Analysis data
+    Using Typescript build web application
+    Using Typescript build node server
+    Using Typescript Realization of mathematical calculation
+
+
+----------------------
+### resource
+
+
+
+
+
+
+----------------------
+### use
+
+
+
+
+
+----------------------
+### dev
+
+    git-clone:
+    npm install
+    change code
+    npm run build
+    test
+    pull request
+
+----------------------
+### issue
+
+
+
+
+
+----------------------
+### Reference
+    
+    ES6
+    JAVA
+    Node
+    lodash
+    lambda
