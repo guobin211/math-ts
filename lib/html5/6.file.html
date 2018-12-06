@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件</title>
+</head>
+<body>
+    <img src="" alt="img" width="300px" height="300px" id="img">
+    <input type="file" onchange="uploadFile(this)" id="upload-file">
+
+    <script>
+        /**
+         * FileReader
+         * 1.readAsText : 读取文本文件  默认编码 utf-8 国内gbk
+         * 2.readAsBinaryString() : 读取任意文件，返回二进制字符串，用户传递存储数据
+         * 3.readAsDataURL() : 读取文件，DataURL，将文件嵌入到文档
+         */
+
+        /**
+         * 上传文件
+         * @param ev input=file element
+         */
+        function uploadFile(ev) {
+            const reader = new FileReader();
+            // 文件列表
+            const _files = ev.files;
+            reader.readAsDataURL(_files[0]);
+            // 成功
+            reader.onload = (rd) =>{
+                // console.log(rd.target.result);
+                addSrc('img', rd.target.result)
+            };
+            // 中断
+            reader.onabort = (ab) => {
+                console.log(ab);
+            };
+            // 错误
+            reader.onerror = (err) => {
+                console.log(err);
+            };
+            // 进度
+            reader.onprogress = (pro) => {
+                // 读取所需要的事件 = pro.timeStamp
+                console.log(pro.timeStamp);
+            }
+        }
+        function addSrc(dom, url) {
+            document.getElementById(dom).src = url;
+        }
+    </script>
+</body>
+</html>
