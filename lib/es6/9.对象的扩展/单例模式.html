@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单例</title>
+</head>
+<body>
+
+<script>
+    window.onload = (function () {
+        console.log(window.clientInformation);
+
+        function fn1() {
+            var a =1;
+            var b =2;
+            var name = "jack";
+            // 返回对象数据
+            return {
+                a:a,
+                b:b,
+                name:name
+            };
+        }
+        var f =fn1();
+        console.log(f);
+        // 单例模式
+        var person1=(function () {
+            // 私有变量a
+            var a = 1;
+            // 私有函数
+            var sum = function (b) {
+                return b+1;
+            };
+            // 返回函数
+            return {
+                a:a,
+                b:sum
+            }
+        })();
+        console.log(person1);
+        // 返回计算结果  4
+        console.log(person1.b(3));
+    });
+</script>
+</body>
+</html>
