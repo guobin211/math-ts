@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d立方体</title>
+    <style type="text/css">
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            position: relative;
+            transform: rotate3d(1,1,1, 90deg);
+            /*让子元素保留3d效果*/
+            transform-style: preserve-3d;
+        }
+        .box >div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+        .front{
+            background: #65fff2;
+            transform: translateZ(150px);
+        }
+        .back{
+            background: #cccccc;
+            transform: translateZ(-150px);
+        }
+        .top{
+            background: #1b98f8;
+            transform: translateX(-150px) rotateY(-90deg);
+        }
+        .bottom{
+            background: #6d78ff;
+            transform: translateX(150px) rotateY(90deg);
+        }
+        .left{
+            background: #333333;
+            transform: translateY(-150px) rotateX(-90deg);
+        }
+        .right{
+            background: #C2FFD8;
+            transform: translateY(150px) rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="front">前</div>
+        <div class="back">后</div>
+        <div class="top">上</div>
+        <div class="bottom">下</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+    </div>
+
+</body>
+</html>

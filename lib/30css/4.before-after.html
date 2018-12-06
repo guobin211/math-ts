@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style type="text/css">
+        .hooks{
+            width: 300px;
+            height: 300px;
+            color: #ffffff;
+            font-size: 36px;
+            background: #0071ff;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+        }
+        .child{
+            background: #cccccc;
+            display: inline-flex;
+            align-items: center;
+        }
+        .hooks::before{
+            content: 'before';
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: orange;
+            position: absolute;
+            top: 40px;
+            left: 30px;
+        }
+        .hooks::after{
+            content: 'after';
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: red;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+        .brother{
+            background: #65fff2;
+        }
+    </style>
+</head>
+<body>
+    <div class="hooks">
+        <div class="child">666</div>
+    </div>
+<div class="brother">
+    又一个div
+</div>
+</body>
+</html>

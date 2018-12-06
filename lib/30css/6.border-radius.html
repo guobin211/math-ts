@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角边框</title>
+    <style type="text/css">
+        .top{
+            width: 200px;
+            height: 100px;
+            margin: 15px auto;
+            background: darkgreen;
+            border-radius: 100px 100px 0 0;
+            position: relative;
+        }
+        .top::before{
+            content: '';
+            background: #fff;
+            top: 50px;
+            left: 50px;
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .top::after{
+            content: '';
+            background: #fff;
+            top: 50px;
+            right: 50px;
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .mid{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: darkgreen;
+            border-radius: 0 0 50px 50px;
+            position: relative;
+        }
+        .mid::before{
+            content: '';
+            background: darkgreen;
+            top: 20px;
+            left: -30px;
+            height: 140px;
+            width: 20px;
+            border-radius: 5px;
+            position: absolute;
+        }
+        .mid::after{
+            content: '';
+            background: darkgreen;
+            top: 20px;
+            right: -30px;
+            height: 140px;
+            width: 20px;
+            border-radius: 5px;
+            position: absolute;
+        }
+        .foot{
+            position: relative;
+            width: 200px;
+            margin: 0 auto;
+        }
+        .foot::before{
+            content: '';
+            background: darkgreen;
+            top: 0;
+            left: 50px;
+            height: 60px;
+            width: 20px;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+        }
+        .foot::after{
+            content: '';
+            background: darkgreen;
+            top: 0;
+            right: 50px;
+            height: 60px;
+            width: 20px;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+    </div>
+    <div class="mid">
+    </div>
+    <div class="foot">
+    </div>
+</body>
+</html>

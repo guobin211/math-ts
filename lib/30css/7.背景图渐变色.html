@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            /*线性渐变*/
+            background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            /*镜像渐变*/
+            background: radial-gradient(circle farthest-side at 50px 50px, red, beige);
+        }
+        /*图片背景*/
+        .bg{
+            width: 100%;
+            height: 600px;
+            background: url("./th.jpeg") no-repeat;
+            /*自适应元素背景区域 图片放大或缩小 大图会留白 */
+            /*background-size: contain;*/
+            background-size: cover;
+            background-position: -50px 0;
+            /*通过padding裁切移动端小图*/
+            padding: 10px;
+            /*
+            设置坐标原点
+            border-box
+            padding-box
+            content-box
+            */
+            background-origin: content-box;
+            /*裁切图片*/
+            background-clip: content-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+    <div class="two">
+    </div>
+    <div class="bg">
+    </div>
+</body>
+</html>

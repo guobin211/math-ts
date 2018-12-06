@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型</title>
+    <style type="text/css">
+        /* 真实的宽度 content + padding + border */
+        .box{
+            width: 400px;
+            height: 200px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 10px solid red;
+            background: #ccc;
+            display: block;
+        }
+        .left{
+            width: 190px;
+            height: 100%;
+            background: orange;
+            float: left;
+            display: inline-block;
+            border: 5px solid #65fff2;
+            /* width = width (包含border) */
+            box-sizing: border-box;
+            /* width = width + border */
+            /*box-sizing: content-box;*/
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            background: #1b98f8;
+            float: left;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="left">
+        盒模型的组成大家肯定都懂，由里向外content,padding,border,margin.
+        盒模型是有两种标准的，一个是标准模型，一个是IE模型。
+    </div>
+    <div class="right">
+
+    </div>
+</div>
+</body>
+</html>
