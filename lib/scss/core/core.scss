@@ -1,0 +1,152 @@
+@import "../_reset/reset.scss";
+@import "../_mixin/default.scss";
+// clear-fix 清除浮动
+.clear-fix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* 行布局 */
+.bg-row {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  table .bg-row {
+    display: block;
+  }
+}
+/*  24列布局 */
+.bg-col,
+.bg-col-1,
+.bg-col-2,
+.bg-col-3,
+.bg-col-4,
+.bg-col-5,
+.bg-col-6,
+.bg-col-7,
+.bg-col-8,
+.bg-col-9,
+.bg-col-10,
+.bg-col-11,
+.bg-col-12,
+.bg-col-13,
+.bg-col-14,
+.bg-col-15,
+.bg-col-16,
+.bg-col-17,
+.bg-col-18,
+.bg-col-19,
+.bg-col-20,
+.bg-col-21,
+.bg-col-22,
+.bg-col-23,
+.bg-col-24 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  & img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.bg-col,.bg-col-24{
+  width: 100%;
+}
+.bg-col-1{
+  width: 4.1667%;
+}
+.bg-col-2{
+  width: 8.3333%;
+}
+.bg-col-3{
+  width: 12.5000%;
+}
+.bg-col-4{
+  width: 16.6667%;
+}
+.bg-col-5{
+  width: 20.8333%;
+}
+.bg-col-6{
+  width: 25.0000%;
+}
+.bg-col-7{
+  width: 29.1667%;
+}
+.bg-col-8{
+  width: 33.3333%;
+}
+.bg-col-9{
+  width: 37.5000%;
+}
+.bg-col-10{
+  width: 41.6667%;
+}
+.bg-col-11{
+  width: 45.83333%;
+}
+.bg-col-12{
+  width: 50.0000%;
+}
+.bg-col-13{
+  width: 54.1667%;
+}
+.bg-col-14{
+  width: 58.3333%;
+}
+.bg-col-15{
+  width: 62.5000%;
+}
+.bg-col-16{
+  width: 66.6667%;
+}
+.bg-col-17{
+  width: 70.8333%;
+}
+.bg-col-18{
+  width: 75.0000%;
+}
+.bg-col-19{
+  width: 79.1667%;
+}
+.bg-col-20{
+  width: 83.3333%;
+}
+.bg-col-21{
+  width: 87.5000%;
+}
+.bg-col-22{
+  width: 91.6667%;
+}
+.bg-col-23{
+  width: 95.8333%;
+}
+
+// 测试mixin
+//.border-1px{
+//  @include border-bottom(1px, dashed, #f08300)
+//}
+//.big{
+//  @include border(1px,solid,#c0c)
+//}
+//.bd-1px{
+//  @include border-1px(1px,solid,#f00)
+//}
