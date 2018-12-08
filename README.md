@@ -10,7 +10,7 @@
 
     import * as math from 'math-ts'; 
     const arr = [1, 2, 3, 4];
-    arr.chunk(2);   // [[1,2],[3,4]]
+    math.chunk(arr, 2);
         
 ```
 
