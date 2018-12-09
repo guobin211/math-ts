@@ -1,8 +1,8 @@
-# math-ts Typescript
+# math-ts Typescript Utils
 
-> description
-
-
+> Use Typescript Programming
+> Some common tools for writing code
+> Including Server Backend, database, Algorithm, Mathematics, DomDiff, Cache,  Middleware, Etc.
 
 ----------------------
 ### resource
@@ -13,28 +13,20 @@
 
 
 ----------------------
-### use
+### Do not use it directly in the production environment.
 
-
-
+     You can copy the code to build your own tools, 
+     but it isn't recommended that you use the project code directly.
 
 
 ----------------------
-### dev
+### dev or build
 
     git-clone:
     npm install
-    change code
+    npm run dev
     npm run build
     test
-    pull request
 
 ----------------------
-### issue
 
-
-
-
-
-----------------------
-### Reference
