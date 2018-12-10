@@ -29,6 +29,12 @@
     
     mongodb 4.0.4
     
+    ### db path
+    > sudo mkdir /usr/local/mongodb/data
+    
+    ### log path
+    > sudo mkdir /usr/local/mongodb/mongodb.log
+    
     > sudo ./mongod -dbpath=/usr/local/mongodb/data -logpath=/usr/local/mongodb/mongodb.log -logappend -port=27017 -fork
     
     > ./mongod -shutdown -dbpath=/usr/local/mongodb/data
