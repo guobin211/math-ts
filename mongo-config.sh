@@ -1,12 +1,13 @@
+#!/usr/bin/env bash
 ### mongodb
 
 ### install mongodb and add $PATH to your ENV:bin
 
 ### default port http://127.0.0.1:27017
 
-> sudo mongod
+# sudo mongod
 
 ### mongo stop
 
-> use admin
-> db.shutdownServer()
+# use admin
+# db.shutdownServer()
