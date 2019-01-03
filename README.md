@@ -1,10 +1,6 @@
 # Typescript Tool library
 
-a library of data manipulation and processing
- 
-Use Typescript Programming
-
-Some common tools for writing code
+Easy Function of Typescript
     
 ### Test Function
 
