@@ -33,20 +33,4 @@ Easy Function of Typescript
     sort
     stacks
     tree
-    
 
-### Reference
-
-[TypeScript DOC](https://www.tslang.cn/docs/home.html)
-
-[Nodejs CN](http://nodejs.cn/api/)
-
-[Lodash ](https://lodash.com/)
-
-[Ramda ](http://ramda.cn/docs/)
-
-[30-seconds Code](https://github.com/30-seconds)
-
-[Javascript MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
-
-[ECMAScript 6 入门](http://es6.ruanyifeng.com/)
