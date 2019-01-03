@@ -1,14 +1,14 @@
 # Typescript Tool library
 
- a library of data manipulation and processing
- Use Typescript Programming
- Some common tools for writing code
+a library of data manipulation and processing
+ 
+Use Typescript Programming
+
+Some common tools for writing code
     
 ### Test Function
 
     npm i math-ts --save
-
-```typescript
 
     import chunk from 'math-ts/package.array'; 
     const arr = [1, 2, 3, 4];
@@ -19,8 +19,7 @@
     
     dateFormat(new Date())  // 2018-11-11
     
-```
-  
+
 ### package list
 
     array
