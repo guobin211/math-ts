@@ -1,6 +1,8 @@
 # Typescript Tool library
 
 Easy Function of Typescript
+
+Each function is independent and small
     
 ### example Function
 
@@ -68,6 +70,44 @@ Easy Function of Typescript
     sumPower                幂累加
     standardDeviation       总体标准偏差 (默认 true)/ 样本标准偏差 (传入 false)
 
+### string
+
+    buildUrlParams                  对象转url查询参数
+    capitalize                      首字母大写
+    capitalizeEveryWord             每个单词首字母大写
+    csvDownload                     下载csv文件
+    escapeHTML                      转义成html
+    escapeRegExp                    转义正则表达式
+    fromCamelCase                   解析驼峰命名
+    getURLParams                    获取url查询参数
+    htmlToExcel                     下载html的表格
+    isAbsoluteURL                   是否是绝对地址
+    mask                            遮罩
+    parseCookie                     解析cookie
+    randomHexColorCode              随机颜色
+    reverseString                   反转字符串
+    serializeCookie                 序列化cookie
+    sortCharactersInString          按字母顺序排列
+    splitLines                      将多行字符串拆分为数组
+    toCamelCase                     转成驼峰
+    toKebabCase                     转成链接符
+    toSnakeCase                     转成下划线
+    unescapeHTML                    反解析html
+    words                           字符串转换为单词数组
+    csvDownload                     下载csv文件
+
+### sort    排序算法样本
+    
+    bubbleSort                      冒泡排序
+    countingSort                    计数排序
+    heapSort                        堆排序
+    insertionSort                   插入排序
+    mergeSort                       归并排序
+    quickSort                       快速排序
+    radixSort                       基数排序
+    selectionSort                   选择排序
+    shellSort                       希尔排序
+
 ### package list
 
     array
@@ -80,7 +120,7 @@ Easy Function of Typescript
     linked
     math
     object
-    queues
+    queue
     sort
     stacks
     tree
