@@ -5,6 +5,6 @@
  * @param args
  */
 // @ts-ignore
-const curry = (fn, arity = fn.length, ...args) => {
+export const curry = (fn, arity = fn.length, ...args) => {
     return arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
 };

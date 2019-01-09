@@ -72,7 +72,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
-    // "declarationDir": "lib"                /* Output directory for generated declaration files. */
+    // "declarationDir": "doc"                /* Output directory for generated declaration files. */
   },
   "include": [
     "src/**/*",
@@ -80,8 +80,8 @@
   ],
   "exclude": [
     "node_modules",
-    "lib",
-    "lib/typescript/*",
+    "doc",
+    "doc/typescript/*",
     "website"
   ]
 }

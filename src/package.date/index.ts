@@ -3,6 +3,9 @@ import { getPrev } from './getPrev';
 import { getNext } from './getNext';
 import {getDaysDiffBetweenDates} from "./getDaysDiffBetweenDates";
 
+/**
+ * package.date
+ */
 export default {
     dateFormat: dateFormat,
     getPrev: getPrev,
