@@ -36,7 +36,7 @@
     // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+     "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
     // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
     // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
 
@@ -75,13 +75,15 @@
     // "declarationDir": "doc"                /* Output directory for generated declaration files. */
   },
   "include": [
-    "src/**/*",
-    "src/*"
+    "src/**/*.ts",
+    "src/*.ts"
   ],
   "exclude": [
     "node_modules",
     "doc",
     "doc/typescript/*",
-    "website"
+    "website",
+    "src/**/*.spec.ts",
+    "src/*.spec.ts"
   ]
 }

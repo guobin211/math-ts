@@ -13,6 +13,7 @@
     "build:types": "tsc --emitDeclarationOnly"
   },
   "devDependencies": {
+    "ts-node": "^7.0.1",
     "typescript": "^3.1.5"
   }
 }
