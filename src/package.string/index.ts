@@ -20,6 +20,7 @@ import {toSnakeCase} from "./toSnakeCase";
 import {unescapeHTML} from "./unescapeHTML";
 import {words} from "./words";
 import {csvDownload} from "./csvDownload";
+import { firstUniqChar } from "./firstUniqChar";
 
 /**
  * package.string
@@ -47,4 +48,5 @@ export default {
     unescapeHTML: unescapeHTML,
     words: words,
     csvDownload: csvDownload,
+    firstUniqChar: firstUniqChar,
 }
