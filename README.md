@@ -6,51 +6,75 @@ Each function is independent and small
     
 ### example Function
 
+```bash
     npm i math-ts --save
 
+```
+        
+```typescript
+    // import one function very small
+    import {pascal} from 'math-ts/package.math/pascal';
+    pascal(3);       //  [[1][1,1][1,2,1]]
+    
+    // takeTime for function
+    import {takeTime} from 'math/package.math/takeTime';
+    const getName = () => {
+      // ...
+    }
+    takeTime(getName);  //   timeTaken: 0.964ms
+    
+    // array
     import {chunk} from 'math-ts/package.array/chunk'; 
     const arr = [1, 2, 3, 4];
     chunk(arr, 2);     // [ [1, 2], [3, 4] ]
     
-    
+    // date
     import {dateFormat} from 'math-ts/package.date/dateFormat';
-    
     dateFormat(new Date())  // 2018-11-11
+    
+    // package.sort has 9 template of sort array
+    
+```
 
 ### array
     
-    arrayDifference:      获取数组差集
-    chunk:                数组分组
-    compact:              过滤数组假值元素
-    countBy:              数组分组
-    countOccurrences:     计算元素出现次数 
-    deepflatten:            深度平铺数组
-    difference:             数组比较差异
-    differenceWith:         根据函数比较数组差异
-    dropElements:           删除元素
-    everyNth:               获取数组中的每组的第n个元素
-    filterNoUnique:         过滤掉数组中的非唯一值
-    flatten:                按层次平铺数组
-    forEachRight:           反方向遍历
-    groupBy:                按函数分组
-    indexOfAll:             查找元素的所有索引
-    init2DArray:            初始化一个二维数组
-    intersection:           两个数组中都存在的元素
-    isSorted:               是否是排序数组
-    join:                   数组拼接成字符串
-    longsItem:              数组中最长的
-    mapObject:              数组转object映射
-    occunrrence:            计算元素出现的次数
-    pick:                   提取数组元素
-    pull:                   删除数组元素
-    pullAtIndex:            按索引删除元素
-    pullAtValue:            按值删除元素
-    reducedFilter:          过滤一个对象数组
-    sample:                 随机获取数组元素
-    setArray:               数组去重复
-    shuffle:                数组洗牌
-    similar:                获取数组交集
-    union:                  数组合集
+    arrayDifference         获取数组差集
+    chunk                   数组分组
+    compact                 过滤数组假值元素
+    countBy                 数组分组
+    countOccurrences        计算元素出现次数 
+    deepflatten             深度平铺数组
+    difference              数组比较差异
+    differenceWith          根据函数比较数组差异
+    dropElements            删除元素
+    everyNth                获取数组中的每组的第n个元素
+    filterNoUnique          过滤掉数组中的非唯一值
+    flatten                 按层次平铺数组
+    forEachRight            反方向遍历
+    groupBy                 按函数分组
+    indexOfAll              查找元素的所有索引
+    init2DArray             初始化一个二维数组
+    intersection            两个数组中都存在的元素
+    isSorted                是否是排序数组
+    join                    数组拼接成字符串
+    longsItem               数组中最长的
+    mapObject               数组转object映射
+    occunrrence             计算元素出现的次数
+    pick                    提取数组元素
+    pull                    删除数组元素
+    pullAtIndex             按索引删除元素
+    pullAtValue             按值删除元素
+    reducedFilter           过滤一个对象数组
+    sample                  随机获取数组元素
+    setArray                数组去重复
+    shuffle                 数组洗牌
+    similar                 获取数组交集
+    union                   数组合集
+    intersect               两个数组的交集
+    maxProfit               数组单一最大累差（买卖股票的最佳时机）
+    rotate                  将数组中的元素向右移动 k 个位置
+    rotateMatrix            旋转矩阵 n x n（图）
+    singleNumber            只出现一次的number
     
 ### date
     
@@ -69,6 +93,8 @@ Each function is independent and small
     toSafeInteger           安全整数
     sumPower                幂累加
     standardDeviation       总体标准偏差 (默认 true)/ 样本标准偏差 (传入 false)
+    pascal                  帕斯卡三角
+    takeTime                函数耗时
 
 ### string
 
@@ -95,6 +121,7 @@ Each function is independent and small
     unescapeHTML                    反解析html
     words                           字符串转换为单词数组
     csvDownload                     下载csv文件
+    firstUniqChar                   第一个不重复的字符
 
 ### sort    排序算法样本
     
