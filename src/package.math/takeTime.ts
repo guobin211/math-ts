@@ -8,3 +8,4 @@ export const takeTime = (callback: Function) => {
     console.timeEnd('timeTaken');
     return r;
 };
+
