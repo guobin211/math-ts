@@ -3,64 +3,41 @@
  * @return {boolean}
  */
 var isValidSudoku = function (board) {
-
+//   检查每一行
+  for (let arr of board) {            
+    let row = []
+    for (let c of arr) {
+      if (c !== '.') row.push(c);
+    }
+    let set = new Set(row)
+    if (set.size !== row.length) return false;
+  }
+  
+//   检查每一列
   for (let i = 0; i < 9; i++) {
-    const nums = board[i].filter(item => item > 0)
-    /**
-     * 检查每一行
-     */
-    for (let i = 0; i < nums.length - 1; i++) {
-      for (let j = i + 1; j < nums.length; j++) {
-        if (nums[i] === nums[j]) {
-          return false;
+    let col = []
+    board.map( arr => {
+      if (arr[i] !== '.') col.push(arr[i])
+    })
+    let set = new Set(col)
+    if (set.size !== col.length) return false;
+  }
+  
+//   检查每个小方块
+  for (let x = 0; x < 9; x += 3) {
+    for (let y = 0; y < 9; y += 3) {
+      let box = []
+      for (let a = x; a < 3 + x; a ++) {
+        for (let b = y; b < 3 + y; b ++) {
+          if (board[a][b] !== '.') box.push(board[a][b])
         }
       }
-    }
-    /**
-     * 9宫格
-     */
-    const checks = [
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      []
-    ];
-    const _col = [];
-    for (let j = 0; j < 9; j++) {
-      _col.push(board[j][i]);
-      
-    }
-
-    console.log(checks);
-    const check = checks[i].filter(item => item > 0);
-
-    for (let i = 0; i < check.length - 1; i++) {
-      for (let j = i + 1; j < check.length; j++) {
-        if (check[i] === check[j]) {
-          return false;
-        }
-      }
-    }
-
-    const col = _col.filter(item => item > 0);
-    /**
-     * 检查每一列
-     */
-    for (let i = 0; i < col.length - 1; i++) {
-      for (let j = i + 1; j < col.length; j++) {
-        if (col[i] === col[j]) {
-          return false;
-        }
-      }
+      let set = new Set(box)
+      if (set.size !== box.length) return false
     }
   }
-
-  return true;
+  
+  return true
 };
 
 
