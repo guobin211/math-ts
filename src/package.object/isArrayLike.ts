@@ -6,7 +6,7 @@
 export const isArrayLike = (val: any) => {
     try {
         // @ts-ignore
-        return [...val], true;
+        return [...val];
     } catch (e) {
         return false;
     }
