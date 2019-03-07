@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖放</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        #div1{
+            border: 2px solid #1b98f8;
+        }
+        #div2{
+            border: 2px solid #ff0d00;
+        }
+        #drag{
+            background: #0071ff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <h1>拖</h1>
+    <p id="drag" draggable="true">第一个文本段落</p>
+</div>
+<div id="div2">
+    <h1>放</h1>
+</div>
+
+<script>
+    (()=>{
+        // 被拖动的元素
+        const DRAG_DIV = document.getElementById('drag');
+        // 目标元素
+        const TARGET_DIV = document.getElementById('div2');
+
+        DRAG_DIV.setAttribute('draggable', 'true');
+        /**
+         * 被拖拽元素事件
+         * on drag 持续拖放触发
+         * on drag start
+         * on drag leave
+         * on drag end
+         */
+        DRAG_DIV.ondrag = (ev) => {
+            // console.log(ev);
+        };
+        DRAG_DIV.ondragstart = (ev) => {
+            console.log('开始拖动');
+            /**
+             *  dataTransfer 存储数据
+             *  setData 存数据
+             *  drop中 getData 去数据
+             */
+            ev.dataTransfer.setData("text/html", ev.target.id);
+        };
+        DRAG_DIV.ondragleave = () => {
+            console.log('离开原来的位置');
+        };
+        DRAG_DIV.ondragend = () => {
+            console.log('结束拖动');
+        };
+
+        /**
+         * 目标元素事件
+         * on drag enter
+         * on drag over  停留在目标元素上
+         * on drop       放下
+         * on drag leave
+         */
+        TARGET_DIV.ondragover = (ev) => {
+            // 阻止默认行为
+            ev.preventDefault();
+            ev.stopPropagation();
+            // console.log('拖放元素在目标元素内移动');
+        };
+        TARGET_DIV.ondragenter = () => {
+            console.log('拖放元素进入目标元素');
+        };
+        TARGET_DIV.ondrop = (ev) => {
+            console.log('放入目标位置');
+            TARGET_DIV.appendChild(DRAG_DIV);
+        };
+        TARGET_DIV.ondragleave = () => {
+            console.log('拖放元素离开目标元素');
+        };
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+</head>
+<body>
+    <!--
+    poster
+    设置视频的封面
+    -->
+    <video id="video-hooks" src="<YOUR_URL>" poster="<YOUR_URL>" width="100%" controls autoplay muted loop preload controlslist="nodownload nofullscreen"></video>
+    <script type="text/javascript">
+        const video = document.getElementById("video-hooks");
+        video.currentTime = 60;      // 时间控制
+        video.playbackRate = 0.5;    // 播放速度
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地理定位</title>
+</head>
+<body>
+<h1 id="text"></h1>
+<script>
+    const text = document.getElementById('text');
+    function getLocation() {
+        if (navigator.geolocation) {
+            // 获取地理信息
+            navigator.geolocation.getCurrentPosition(showPosition, showError, {enableHighAccuracy: true, timeout: 4000, maximumAge: 8000});
+        } else {
+            alert('你的浏览器不支持地理定位')
+        }
+    }
+    function showPosition(position) {
+        /**
+         * 纬度 position.coords.latitude
+         * 经度 position.coords.longitude
+         * 高度 position.coords.altitude
+         * 精度 position.coords.accuracy
+         */
+        console.log(position.coords.latitude, position.coords.longitude, position.coords.altitude, position.coords.accuracy)
+        text.innerText = '纬度: ' + position.coords.latitude + '经度: ' +  position.coords.longitude;
+    }
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                text.innerText = '不允许使用地理定位';
+                break;
+            case error.POSITION_UNAVAILABLE:
+                text.innerText = '获取不到地理信息';
+                break;
+            case error.TIMEOUT:
+                text.innerText = '超时';
+                break;
+            case error.UNKNOWN_ERR:
+                text.innerText = '未知错误';
+                break;
+        }
+    }
+    window.onload = function () {
+        getLocation();
+    }
+</script>
+</body>
+</html>
