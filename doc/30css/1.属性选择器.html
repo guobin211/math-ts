@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3</title>
+    <style type="text/css">
+        /*属性选择器*/
+        li[style]{
+            color: #0071ff;
+        }
+        li[class=red] {
+            color: red;
+        }
+        /*属性包含red*/
+        li[class*=red] {
+            color: red;
+        }
+        /*  ^ 表示以dark开头  $ 表示结尾 */
+        li[class^=dark] {
+            color: #65fff2;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li style="">属性选择器</li>
+    <li class="red">属性选择器</li>
+    <li class="blue">属性选择器</li>
+    <li class="dark-red">属性选择器</li>
+    <li class="yellow">属性选择器</li>
+    <li class="red-start">属性选择器</li>
+</ul>
+
+
+</body>
+</html>

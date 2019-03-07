@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+            background: #1b98f8;
+            display: flex;
+            color: #FFF;
+            font-size: 48px;
+            align-items: center;
+            /*animation-name: rot;*/
+            /*animation-delay: 3s;*/
+            /*animation-direction: normal;*/
+            animation: linear rot 2s;
+            /*动画结束的状态选择*/
+            animation-fill-mode: forwards;
+        }
+
+
+        @keyframes rot {
+            0%{
+                transform: translate(0, 0);
+            }
+            50%{
+
+            }
+            100%{
+                transform: translate(200px, 200px);
+            }
+        }
+        .rotate{
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 50px auto;
+            background: #1b98f8;
+            animation: rotate360 linear 5s infinite;
+            /*动画状态播放暂停*/
+            animation-play-state: running;
+        }
+
+        @keyframes rotate360 {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        动画
+    </div>
+<span class="rotate">
+
+</span>
+</body>
+</html>
