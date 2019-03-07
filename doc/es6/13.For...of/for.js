@@ -10,6 +10,10 @@ for (let key in obj) {
     console.log(key);
 }
 
+for (let key in data) {
+    console.log(key);
+}
+
 for (let el of data){
     console.log(el)
 }
