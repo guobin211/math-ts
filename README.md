@@ -21,7 +21,7 @@ Each function is independent and small
     const getName = () => {
       // ...
     }
-    takeTime(getName);  //   timeTaken: 0.964ms
+    takeTime(getName);  //   测试函数耗时 timeTaken: 0.964ms
     
     // array
     import {chunk} from 'math-ts/package.array/chunk'; 

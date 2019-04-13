@@ -3,6 +3,7 @@
  * @author guobin201314@gmail.com on 2019-03-09
  */
 export class Node {
+
     data: any;
     left: any;
     right: any;
