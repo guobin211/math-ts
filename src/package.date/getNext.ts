@@ -1,7 +1,7 @@
 /**
  * 获取明天，下个月，明年
  * @param now
- * @param l
+ * @param l = d | m | y
  */
 export function getNext(now: Date, l: string) {
     const y = now.getFullYear();
