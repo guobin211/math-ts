@@ -2,7 +2,7 @@
  * Main.spec
  * @author guobin201314@gmail.com on 2019-03-08
  */
-import { Stack } from "./Stack";
+import { Stack } from './Stack';
 
 const s = new Stack();
 
@@ -28,6 +28,3 @@ s.pop();
 s.clear();
 
 console.log(s);
-
-
-

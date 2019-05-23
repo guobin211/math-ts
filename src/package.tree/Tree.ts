@@ -1,3 +1,5 @@
 export class Tree {
-    constructor() {}
+  constructor() {
+    console.log('tree start');
+  }
 }

@@ -4,9 +4,9 @@
  */
 
 export function browersWidth(): number {
-    if ((document.body) && (document.body.clientWidth)) {
-        return document.body.clientWidth;
-    } else {
-        return window.innerWidth;
-    }
+  if ((document.body) && (document.body.clientWidth)) {
+    return document.body.clientWidth;
+  } else {
+    return window.innerWidth;
+  }
 }
