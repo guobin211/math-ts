@@ -14,12 +14,12 @@ export class MySet {
         return this.collection.indexOf(el, 0) !== -1;
     }
 
-    values(): any[]{
+    values(): any[] {
         return this.collection;
     }
 
-    add(el: any): boolean{
-        if (this.has(el)){
+    add(el: any): boolean {
+        if (this.has(el)) {
             return false;
         } else {
             this.collection.push(el);
@@ -27,14 +27,14 @@ export class MySet {
         }
     }
 
-    size(): number{
+    size(): number {
         return this.collection.length;
     }
 
-    remove(el: any): boolean{
-        if (this.has(el)){
+    remove(el: any): boolean {
+        if (this.has(el)) {
             const index = this.collection.indexOf(el);
-            this.collection.splice(index,1);
+            this.collection.splice(index, 1);
             return true;
         } else {
             return false;
@@ -45,12 +45,12 @@ export class MySet {
      * 并集
      * @param otherSet
      */
-    union(otherSet: MySet): Set<any>{
+    public union(otherSet: MySet): Set<any> {
         const unionSet = new Set();
         const firstSet = this.values();
         const secondSet = otherSet.values();
-        firstSet.forEach(el => unionSet.add(el));
-        secondSet.forEach(el => unionSet.add(el));
+        firstSet.forEach((el) => unionSet.add(el));
+        secondSet.forEach((el) => unionSet.add(el));
         return unionSet;
     }
 
@@ -58,11 +58,11 @@ export class MySet {
      * 交集
      * @param otherSet
      */
-    intersection(otherSet: MySet): Set<any>{
+    public intersection(otherSet: MySet): Set<any> {
         const intersection = new Set();
         const first = this.values();
-        first.forEach(el => {
-            if (otherSet.has(el)){
+        first.forEach((el) => {
+            if (otherSet.has(el)) {
                 intersection.add(el);
             }
         });
@@ -73,10 +73,10 @@ export class MySet {
      * 差集
      * @param otherSet
      */
-    difference(otherSet: MySet): Set<any>{
+    public difference(otherSet: MySet): Set<any> {
         const difference = new Set();
         const first = this.values();
-        first.forEach(el => {
+        first.forEach((el) => {
             if (!otherSet.has(el)) {
                 difference.add(el);
             }
@@ -88,11 +88,11 @@ export class MySet {
      * 子集
      * @param otherSet
      */
-    subset(otherSet: MySet): boolean{
+    public subset(otherSet: MySet): boolean {
         const first = this.values();
-        return first.every(value => {
+        return first.every((value) => {
             return otherSet.has(value);
-        })
+        });
     }
 
 }

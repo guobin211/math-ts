@@ -1,8 +1,9 @@
-import {truthCheckCollection} from "./truthCheckCollection";
+import {truthCheckCollection} from './truthCheckCollection';
 
 /**
  * package.collection
  */
 export default {
-    truthCheckCollection: truthCheckCollection,
-}
+    truthCheckCollection,
+};
+

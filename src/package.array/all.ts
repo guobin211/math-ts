@@ -3,10 +3,8 @@
  * @param arr
  * @param fn
  */
-export const all = (arr: Array<any>, fn: BoolFunction): boolean => {
+export const all = (arr: any[], fn: BoolFunction): boolean => {
     return arr.every(fn);
-}
+};
 
-export interface BoolFunction {
-    (el: any): boolean
-}
+export type BoolFunction = (el: any) => boolean;
