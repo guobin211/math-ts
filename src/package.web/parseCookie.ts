@@ -4,14 +4,14 @@
  * @author guobin201314@gmail.com on 2019-04-17
  */
 
-export function parseCookie(str: string): any {
-  str
-      .split(';')
-      .map((v) => v.split('='))
-      .reduce(
-          (acc: any, v) => {
-            acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
-            return acc;
-          },
-          {});
-}
+export const parseCookie = (str: string) => {
+  return str.split(';')
+            .map((v) => v.split('='))
+            .reduce(
+                (acc: any, v) => {
+                  acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
+                  return acc;
+                },
+                {});
+};
+

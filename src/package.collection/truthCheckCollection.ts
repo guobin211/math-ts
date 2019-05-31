@@ -3,6 +3,6 @@
  * @param collection
  * @param pre
  */
-export function truthCheckCollection(collection: any[], pre: string) {
+export const truthCheckCollection = (collection: any[], pre: string) => {
     return collection.every((obj) => obj[pre]);
 }

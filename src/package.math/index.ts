@@ -1,28 +1,13 @@
-import { average } from "./average";
-import { averageBy } from "./averageBy";
-import { digitize } from "./digitize";
-import { factorial } from "./factorial";
-import { size } from "./size";
-import { standardDeviation } from "./standardDeviation";
-import { sum } from "./sum";
-import { sumPower } from "./sumPower";
-import { toSafeInteger } from "./toSafeInteger";
-import { pascal } from "./pascal";
-import { takeTime } from "./takeTime";
-
-/**
- * package.math
- */
-export default {
-    average: average,
-    averageBy: averageBy,
-    digitize: digitize,
-    factorial: factorial,
-    size: size,
-    standardDeviation: standardDeviation,
-    sum: sum,
-    sumPower: sumPower,
-    toSafeInteger: toSafeInteger,
-    pascal: pascal,
-    takeTime: takeTime,
-}
+export * from "./average";
+export * from "./averageBy";
+export * from "./digitize";
+export * from "./factorial";
+export * from "./index";
+export * from "./pascal";
+export * from "./size";
+export * from "./standardDeviation";
+export * from "./sum";
+export * from "./sumPower";
+export * from "./takeTime";
+export * from "./toDecimal";
+export * from "./toSafeInteger";

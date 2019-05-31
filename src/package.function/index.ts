@@ -1,16 +1,6 @@
-import {chainAsync} from "./chainAsync";
-import {compose} from "./compose";
-import {delay} from "./delay";
-import {sleep} from "./sleep";
-import {curry} from "./curry";
-
-/**
- * package.function
- */
-export default {
-    chainAsync: chainAsync,
-    compose: compose,
-    curry: curry,
-    delay: delay,
-    sleep: sleep,
-}
+export * from "./chainAsync";
+export * from "./compose";
+export * from "./curry";
+export * from "./delay";
+export * from "./index";
+export * from "./sleep";

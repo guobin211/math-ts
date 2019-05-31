@@ -46,5 +46,5 @@ class EventBus implements ISubjectBus {
     }
   }
 }
-
 export const eventBus = new EventBus();
+

@@ -1,22 +1,9 @@
-import {deleteKey} from "./deleteKey";
-import {getType} from "./getType";
-import {invertKeyValues} from "./invertKeyValues";
-import {isArrayLike} from "./isArrayLike";
-import {lowercaseKeys} from "./lowercaseKeys";
-import {mapKeys} from "./mapKeys";
-import {mapValues} from "./mapValues";
-import {merge} from "./merge";
-
-/**
- * package.object
- */
-export default {
-    deleteKey: deleteKey,
-    getType: getType,
-    invertKeyValues: invertKeyValues,
-    isArrayLike: isArrayLike,
-    lowercaseKeys: lowercaseKeys,
-    mapKeys: mapKeys,
-    mapValues: mapValues,
-    merge: merge,
-}
+export * from "./deleteKey";
+export * from "./getType";
+export * from "./index";
+export * from "./invertKeyValues";
+export * from "./isArrayLike";
+export * from "./lowercaseKeys";
+export * from "./mapKeys";
+export * from "./mapValues";
+export * from "./merge";

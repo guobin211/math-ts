@@ -1,9 +1,3 @@
-import {truthCheckCollection} from './truthCheckCollection';
-
-/**
- * package.collection
- */
-export default {
-    truthCheckCollection,
-};
-
+export * from "./MySet";
+export * from "./index";
+export * from "./truthCheckCollection";
