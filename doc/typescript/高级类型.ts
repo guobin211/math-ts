@@ -4,13 +4,14 @@
  * @param second
  */
 function extend<T, U>(first: T, second: U): T & U {
-    let result = <T & U>{};
-    for (let id in first) {
-        (<any>result)[id] = (<any>first)[id];
+    const result = {} as T & U;
+    // tslint:disable-next-line:forin
+    for (const id in first) {
+        (result as any)[id] = (first as any)[id];
     }
-    for (let id in second) {
+    for (const id in second) {
         if (!result.hasOwnProperty(id)) {
-            (<any>result)[id] = (<any>second)[id];
+            (result as any)[id] = (second as any)[id];
         }
     }
     return result;

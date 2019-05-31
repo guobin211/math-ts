@@ -55,10 +55,9 @@ class Employees {
     }
     // 存属性
     set fullName(newName: string) {
-        if (passcode && passcode == "secret passcode") {
+        if (passcode && passcode === "secret passcode") {
             this._fullName = newName;
-        }
-        else {
+        } else {
             console.log("Error: Unauthorized update of employee!");
         }
     }

@@ -39,8 +39,9 @@ interface SearchFunc {
 
 let mySearch: SearchFunc;
 
+// tslint:disable-next-line:only-arrow-functions
 mySearch = function (s: string, sub: string) {
-    let result = s.search(sub);
+    const result = s.search(sub);
     return result > -1;
 };
 
@@ -52,13 +53,14 @@ interface ClockInterface {
     setTime(d: Date): void;
 }
 
-class Clock implements ClockInterface{
-    // @ts-ignore
+class Clock implements ClockInterface {
+
     currentTime: Date;
+    constructor(h: number, m: number) {
+        this.currentTime = new Date();
+    }
     setTime(d: Date) {
         this.currentTime = d;
-    }
-    constructor(h: number, m: number) {
     }
 }
 
@@ -69,10 +71,10 @@ interface Shape {
     color: string;
 }
 
-interface Square extends Shape{
+interface Square extends Shape {
     sideLength: number;
 }
 
-let square = <Square>{};
+let square = {} as Square;
 square.color = 'red';
 square.sideLength = 10;

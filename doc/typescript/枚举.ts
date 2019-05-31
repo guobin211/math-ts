@@ -17,7 +17,7 @@ enum BooleanLikeHeterogeneousEnum {
 }
 
 interface MyDirection {
-    up: Direction.Up,
+    up: Direction.Up;
 }
 
 /**
