@@ -6,7 +6,6 @@ import { Stack } from './Stack';
 
 const s = new Stack();
 
-
 console.log(s.isEmpty());
 
 s.push(3);

@@ -9,7 +9,8 @@ function add(x: number, y: number): void {
  * @param x
  * @param y
  */
-let myAdd: (x: number, y?: number) => number = function (x: number, y?: number): number {
+// tslint:disable-next-line:only-arrow-functions
+let myAdd: (x: number, y?: number) => number = function(x: number, y?: number): number {
     return x + (y || 0);
 };
 
