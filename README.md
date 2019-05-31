@@ -1,4 +1,4 @@
-# Typescript Tool library
+# Typescript Tool
 
 Easy Function of Typescript
 
@@ -7,37 +7,48 @@ Each function is independent and small
 ### example Function
 
 ```bash
+
     npm i math-ts --save
 
 ```
         
 ```typescript
     // import one function very small
-    import {pascal} from 'math-ts/package.math/pascal';
+    import {pascal} from '@src/package.math/pascal';
     pascal(3);       //  [[1][1,1][1,2,1]]
     
     // takeTime for function
-    import {takeTime} from 'math/package.math/takeTime';
+    import {takeTime} from '@src/package.math/takeTime';
     const getName = () => {
       // ...
     }
     takeTime(getName);  //   测试函数耗时 timeTaken: 0.964ms
     
     // array
-    import {chunk} from 'math-ts/package.array/chunk'; 
+    import {chunk} from '@src/package.array/chunk'; 
     const arr = [1, 2, 3, 4];
     chunk(arr, 2);     // [ [1, 2], [3, 4] ]
     
     // date
-    import {dateFormat} from 'math-ts/package.date/dateFormat';
+    import {dateFormat} from '@src/package.date/dateFormat';
     dateFormat(new Date())  // 2018-11-11
     
     // package.sort has 9 template of sort array
     
 ```
 
+### event
+
+```text
+
+    eventBus                事件监听
+
+```
+
 ### array
     
+```text
+
     arrayDifference         获取数组差集
     chunk                   数组分组
     compact                 过滤数组假值元素
@@ -75,16 +86,24 @@ Each function is independent and small
     rotate                  将数组中的元素向右移动 k 个位置
     rotateMatrix            旋转矩阵 n x n（图）
     singleNumber            只出现一次的number
+
+```
     
 ### date
     
+```text
+
     dateFormat                  格式化日期对象
     getPrev                     昨天，上个月，去年
     getNext                     明天，下个月，明年
     getDaysDiffBetweenDates     获取两个日期之间相差的天数
 
+```
+
 ### math
     
+```text
+
     average                 求平均数
     averageBy               根据条件求平均数
     digitize                转化为整数
@@ -96,7 +115,11 @@ Each function is independent and small
     pascal                  帕斯卡三角
     takeTime                函数耗时
 
+```
+
 ### string
+
+```text
 
     buildUrlParams                  对象转url查询参数
     capitalize                      首字母大写
@@ -123,8 +146,12 @@ Each function is independent and small
     csvDownload                     下载csv文件
     firstUniqChar                   第一个不重复的字符
 
+```
+
 ### sort    排序算法样本
     
+```text
+
     bubbleSort                      冒泡排序
     countingSort                    计数排序
     heapSort                        堆排序
@@ -135,7 +162,11 @@ Each function is independent and small
     selectionSort                   选择排序
     shellSort                       希尔排序
 
+```
+
 ### package list
+
+```text
 
     array
     collection
@@ -151,4 +182,6 @@ Each function is independent and small
     sort
     stacks
     tree
+    
+```
 
