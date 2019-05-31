@@ -12,8 +12,13 @@ Each function is independent and small
 
 ```
         
-```typescript
-    // import one function very small
+```text
+    
+    // import ts
+    import { mt } from 'math-ts';
+    mt.pascal(3)
+    
+    // import one function
     import {pascal} from '@src/package.math/pascal';
     pascal(3);       //  [[1][1,1][1,2,1]]
     
