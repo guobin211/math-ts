@@ -1,9 +1,9 @@
 /**
- * whichBrowers
+ * whichBrowser
  * @author guobin201314@gmail.com on 2019-04-17
  */
 
-export function whichBrowers(): browers {
+export function whichBrowser(): browser {
   const userAgent = navigator.userAgent;
   const isOpera = userAgent.indexOf('Opera') > -1;
   if (isOpera) {
@@ -21,6 +21,7 @@ export function whichBrowers(): browers {
   if (userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1 && !isOpera) {
     return 'IE';
   }
+  return 'IE'
 }
 
-export type browers = 'Opera' | 'FF' | 'Chrome' | 'Safari' | 'IE' | undefined;
+export type browser = 'Opera' | 'FF' | 'Chrome' | 'Safari' | 'IE' ;

@@ -109,19 +109,19 @@ import {
   words
 } from './package.string';
 import {
-  browersWidth,
+  browserWidth,
   isWebUrl,
   parseCookie,
-  whichBrowers
+  whichBrowser
 } from './package.web';
 
 
 export const mt = {
-  browersWidth,
+  browserWidth,
   buildUrlParams,
   isWebUrl,
   parseCookie,
-  whichBrowers,
+  whichBrowser,
   capitalize,
   capitalizeEveryWord,
   csvDownload,
