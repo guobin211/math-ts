@@ -3,15 +3,8 @@
  * @param obj
  * @param fn
  *
- * @example
- * const users = {
-      fred: { user: 'fred', age: 40 },
-      pebbles: { user: 'pebbles', age: 1 }
-    };
-    mapValues(users, u => u.age); // { fred: 40, pebbles: 1 }
- *
  */
-export function mapValues(obj: any, fn: Function) {
+export function mapValues(obj: {[key: string]: any}, fn: () => void) {
     Object.keys(obj).reduce((acc, k) => {
         // @ts-ignore
         acc[k] = fn(obj[k], k, obj);

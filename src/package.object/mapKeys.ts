@@ -14,6 +14,4 @@ export function mapKeys(obj: any, fn: ObjectFunction) {
     }, {});
 }
 
-interface ObjectFunction {
-    (key: string, val: any): string
-}
+type ObjectFunction = (key: string, val: any) => string;
