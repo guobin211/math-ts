@@ -6,13 +6,13 @@ export class Queue {
         this.collection = [];
     }
 
-    enqueue(el: any){
+    enqueue(el: any) {
         this.collection.push(el);
     }
 
     dequeue(): any {
         if (this.isEmpty()) {
-            throw new Error('empty queue not allowed dequeue')
+            throw new Error('empty queue not allowed dequeue');
         } else {
             return this.collection.shift();
         }
@@ -30,6 +30,3 @@ export class Queue {
         return this.size() === 0;
     }
 }
-
-
-

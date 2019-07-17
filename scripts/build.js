@@ -45,10 +45,11 @@ function buildIndex() {
     ts += buildIndexImport(list, packages[i]) + '\n';
   }
 
-  ts += '\n\nexport const mt = { };'
+  ts += '\n\nexport const mt = { };';
 
   fs.writeFileSync(path.resolve('../src/index.ts'), ts);
   console.log('success build');
+
 
   function buildIndexImport(arr, pack) {
     let text = 'import { ';

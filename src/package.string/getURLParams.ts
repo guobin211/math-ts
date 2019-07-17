@@ -8,6 +8,4 @@ export const getURLParams = (url: string) => {
         .match(/([^?=&]+)(=([^&]*))/g)
         // @ts-ignore
         .reduce((a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a), {});
-}
-
-
+};

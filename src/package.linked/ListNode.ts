@@ -40,7 +40,7 @@ export class ListNode {
 
     private initialize(nums: number[]): void {
         if (nums.length === 0 || nums === null) {
-            throw new Error("not allowed empty array")
+            throw new Error("not allowed empty array");
         }
         this.val = nums[0];
         let current: ListNode = this;
