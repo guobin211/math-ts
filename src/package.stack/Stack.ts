@@ -1,11 +1,12 @@
 export class Stack<T> {
 
-  private _store: any[] = [];
+  private _store: T[];
 
   private top: any;
 
   constructor() {
     this.top = 0;
+    this._store = [];
   }
 
   public clear(): void {

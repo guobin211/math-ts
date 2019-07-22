@@ -178,7 +178,7 @@ Each function is independent and small
     date
     function
     graph
-    hashmap
+    hashMap
     heap
     linked
     math

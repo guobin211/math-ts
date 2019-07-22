@@ -9,4 +9,4 @@ export const browserWidth = () => {
   } else {
     return window.innerWidth;
   }
-}
+};
