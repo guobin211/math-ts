@@ -4,8 +4,7 @@
  */
 export function lowercaseKeys(obj: any) {
     Object.keys(obj).reduce((acc, key) => {
-        // @ts-ignore
-        acc[key.toLowerCase()] = obj[key];
+        (acc as any)[key.toLowerCase()] = obj[key];
         return acc;
     }, {});
 }
