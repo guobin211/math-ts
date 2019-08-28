@@ -7,3 +7,4 @@ export * from "./lowercaseKeys";
 export * from "./mapKeys";
 export * from "./mapValues";
 export * from "./merge";
+export * from "./isValid";
