@@ -12,7 +12,7 @@ Each function is independent and small
 
 ```
         
-```text
+```typescript
     
     // import ts
     import { mt } from 'math-ts';

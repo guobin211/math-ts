@@ -2,7 +2,7 @@ export class Stack<T> {
 
   private _store: T[];
 
-  private top: any;
+  private top: number;
 
   constructor() {
     this.top = 0;

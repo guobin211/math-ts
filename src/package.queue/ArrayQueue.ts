@@ -1,4 +1,4 @@
-export class Queue {
+export class ArrayQueue {
 
     private readonly collection: any[];
 
@@ -27,6 +27,6 @@ export class Queue {
     }
 
     isEmpty(): boolean {
-        return this.size() === 0;
+        return this.collection.length === 0;
     }
 }
