@@ -7,6 +7,7 @@
 /doc
 /test
 /doc/*
+/vscode/
 
 # dependencies
 /node_modules
