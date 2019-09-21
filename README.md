@@ -2,7 +2,7 @@
 
 Easy Function of Typescript
 
-Each function is independent and small
+>查看文档
     
 ### example Function
 
