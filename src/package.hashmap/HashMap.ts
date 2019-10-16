@@ -5,7 +5,7 @@ export class HashMap<T> {
 
     }
 
-    private _objToHash(obj: any) {
+    private static _objToHash(obj: any) {
         if (typeof obj === 'number') {
         }
     }
@@ -19,6 +19,5 @@ export class HashMap<T> {
         Array.prototype.forEach.call(aUTF16CodeUnits, function (el, idx, arr) { arr[idx] = sString.charCodeAt(idx); });
         // @ts-ignore
         return window.btoa(String.fromCharCode.apply(null, new Uint8Array(aUTF16CodeUnits.buffer)));
-
     }
 }

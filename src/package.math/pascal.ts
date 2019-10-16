@@ -24,4 +24,4 @@ export const pascal = (numRows: number): any => {
     }
 
     return res;
-}
+};

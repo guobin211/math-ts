@@ -32,13 +32,13 @@ class EventBus implements ISubjectBus {
 
   unSubscribe(eventType: string, observer: IObserver): void {
     try {
-      this.remove((this.observersMap.get(eventType) as IObserver[]), (el: IObserver) => el === observer);
+      EventBus.remove((this.observersMap.get(eventType) as IObserver[]), (el: IObserver) => el === observer);
     } catch (e) {
       console.error('@Param<eventType>错误,未注册的事件:' + eventType);
     }
   }
 
-  private remove(observers: IObserver[], fn: (el: IObserver) => boolean): void {
+  private static remove(observers: IObserver[], fn: (el: IObserver) => boolean): void {
     for (let i = 0; i < observers.length; i++) {
       if (fn(observers[i])) {
         observers.splice(i, 1);

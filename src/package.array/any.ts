@@ -5,6 +5,6 @@ import {BoolFunction} from "./all";
  * @param arr
  * @param fn
  */
-export const any = (arr: Array<any>, fn: BoolFunction) => {
+export const any = (arr: Array<any>, fn: BoolFunction): boolean => {
     return arr.some(fn);
-}
+};

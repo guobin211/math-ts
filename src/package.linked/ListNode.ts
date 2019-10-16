@@ -4,10 +4,12 @@
  */
 
 export class ListNode {
-    public val!: number;
-    public next!: ListNode;
+    public val: number;
+    public next: ListNode | null;
 
     constructor(args: number | number[]) {
+        this.val = 0;
+        this.next = null;
         if (typeof (args) === 'number') {
             this.val = args;
         } else {
@@ -21,8 +23,8 @@ export class ListNode {
         }
         let compare = true;
         while (compare) {
-            if (this.next.val === node.val) {
-                this.next = this.next.next;
+            if (this.next!.val === node.val) {
+                this.next = this.next!.next;
                 compare = false;
             }
         }
@@ -39,7 +41,7 @@ export class ListNode {
     }
 
     private initialize(nums: number[]): void {
-        if (nums.length === 0 || nums === null) {
+        if (nums.length === 0) {
             throw new Error("not allowed empty array");
         }
         this.val = nums[0];
