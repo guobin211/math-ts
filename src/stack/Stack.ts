@@ -1,7 +1,5 @@
 export class Stack<T> {
-
   private _store: T[];
-
   private top: number;
 
   constructor() {
@@ -22,9 +20,8 @@ export class Stack<T> {
     if (this.top > 0) {
       return this._store[--this.top];
     } else {
-      throw new Error('Stack is empty');
+      throw new Error("Stack is empty");
     }
-
   }
 
   public push(el: T): void {

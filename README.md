@@ -19,26 +19,26 @@ Easy Function of Typescript
     mt.pascal(3)
     
     // import one function
-    import {pascal} from '@src/package.math/pascal';
+    import {pascal} from 'math-ts';
     pascal(3);       //  [[1][1,1][1,2,1]]
     
     // takeTime for function
-    import {takeTime} from '@src/package.math/takeTime';
+    import {takeTime} from 'math-ts';
     const getName = () => {
       // ...
     }
     takeTime(getName);  //   测试函数耗时 timeTaken: 0.964ms
     
     // array
-    import {chunk} from '@src/package.array/chunk'; 
+    import {chunk} from array; 
     const arr = [1, 2, 3, 4];
     chunk(arr, 2);     // [ [1, 2], [3, 4] ]
     
     // date
-    import {dateFormat} from '@src/package.date/dateFormat';
+    import {dateFormat} from date;
     dateFormat(new Date())  // 2018-11-11
     
-    // package.sort has 9 template of sort array
+    sort
     
 ```
 

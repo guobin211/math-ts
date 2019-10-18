@@ -43,23 +43,23 @@ import {
   stringToUint8Array,
   uint8ArrayToString,
   union
-} from './package.array';
+} from './array';
 import {
   truthCheckCollection
-} from './package.collection';
+} from './collection';
 import {
   dateFormat,
   getDaysDiffBetweenDates,
   getNext,
   getPrev
-} from './package.date';
+} from './date';
 import {
   chainAsync,
   compose,
   curry,
   delay,
   sleep
-} from './package.function';
+} from './function';
 import {
   average,
   averageBy,
@@ -73,7 +73,7 @@ import {
   takeTime,
   toDecimal,
   toSafeInteger
-} from './package.math';
+} from './math';
 import {
   deleteKey,
   getType,
@@ -83,7 +83,7 @@ import {
   mapKeys,
   mapValues,
   merge
-} from './package.object';
+} from './object';
 import {
   buildUrlParams,
   capitalize,
@@ -107,13 +107,13 @@ import {
   toSnakeCase,
   unescapeHTML,
   words
-} from './package.string';
+} from './string';
 import {
   browserWidth,
   isWebUrl,
   parseCookie,
   whichBrowser
-} from './package.web';
+} from './web';
 
 
 export const mt = {

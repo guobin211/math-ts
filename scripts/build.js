@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const packages = [
-  'package.array',
-  'package.collection',
-  'package.date',
-  'package.function',
-  'package.math',
-  'package.object',
-  'package.string',
-  'package.web'
+  'array',
+  'collection',
+  'date',
+  'function',
+  'math',
+  'object',
+  'string',
+  'web'
 ];
 
 function readFileList(p) {
