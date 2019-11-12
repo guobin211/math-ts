@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo -n "Enter the name of this project: "
-read PROJECT
+read -r PROJECT
 case $PROJECT in
 math-ts | npm | node | yarn)
   echo -n "The $PROJECT is not allowed"
@@ -11,5 +11,5 @@ math-ts | npm | node | yarn)
   ;;
 *)
   echo -n "The $PROJECT is created "
-  echo -n "SUCCESS CIN\n"
+  printf "SUCCESS CIN\n"
 esac
