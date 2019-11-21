@@ -4,8 +4,8 @@
 export class LoopQueue<E> {
   private data: E[];
   private front: number;
-  private tail: number;
-  private size: number;
+  private readonly tail: number;
+  private readonly size: number;
   private capacity: number;
 
   constructor(capacity?: number) {
