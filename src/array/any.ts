@@ -5,6 +5,7 @@ import {BoolFunction} from "./all";
  * @param arr
  * @param fn
  */
+// tslint:disable-next-line:variable-name
 export const any = (arr: Array<any>, fn: BoolFunction): boolean => {
     return arr.some(fn);
 };

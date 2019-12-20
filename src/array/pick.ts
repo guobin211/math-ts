@@ -8,5 +8,6 @@
  */
 export function pick(obj: Object, arr: Array<any>) {
     // @ts-ignore
+    // tslint:disable-next-line:ban-comma-operator
     return arr.reduce((acc, curr) => (curr in obj && (acc[curr] = obj[curr]), acc), {});
 }

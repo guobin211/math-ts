@@ -13,9 +13,11 @@
         ]
       }
     ],
+    "indent": [true],
     "no-bitwise": false,
     "semicolon": false,
-    "quotemark": [true, "single"],
+    "quotemark": [false],
+    "one-variable-per-declaration": false,
     "no-empty-interface":true,
     "no-parameter-reassignment":false,
     "prefer-for-of":true,
@@ -53,7 +55,7 @@
     "no-duplicate-imports":true,
     "no-console": false,
     "align":[true,"parameters","statements","members","elements"],
-    "array-type":[true,"array"],
+    "array-type":[false],
     "class-name":true,
     "comment-format":false,
     "encoding":true,
