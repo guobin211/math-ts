@@ -1,7 +1,7 @@
 /**
  * 加载js
  * @param url
- * @param attr
+ * @param attr 属性
  */
 export function loadScript(url: string, attr?: { [key: string]: string }): Promise<any> {
   return new Promise((resolve, reject) => {
