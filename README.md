@@ -1,8 +1,6 @@
 # Typescript Tool
 
 Easy Function of Typescript
-
-> 查看文档
     
 ### example Function
 
