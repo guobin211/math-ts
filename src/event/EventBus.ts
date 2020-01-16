@@ -7,10 +7,18 @@ import { ISubjectBus } from './ISubjectBus';
 
 class EventBus implements ISubjectBus {
 
-  private observersMap: Map<string, IObserver[]>;
-
   constructor() {
     this.observersMap = new Map<string, IObserver[]>();
+  }
+
+  private observersMap: Map<string, IObserver[]>;
+
+  private static remove(observers: IObserver[], fn: (el: IObserver) => boolean): void {
+    for (let i = 0; i < observers.length; i++) {
+      if (fn(observers[i])) {
+        observers.splice(i, 1);
+      }
+    }
   }
 
   publish(eventType: string, data: any): void {
@@ -37,14 +45,7 @@ class EventBus implements ISubjectBus {
       console.error('@Param<eventType>错误,未注册的事件:' + eventType);
     }
   }
-
-  private static remove(observers: IObserver[], fn: (el: IObserver) => boolean): void {
-    for (let i = 0; i < observers.length; i++) {
-      if (fn(observers[i])) {
-        observers.splice(i, 1);
-      }
-    }
-  }
 }
+
 export const eventBus = new EventBus();
 

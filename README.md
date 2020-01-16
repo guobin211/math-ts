@@ -2,24 +2,24 @@
 
 Easy Function of Typescript
 
->查看文档
+> 查看文档
     
 ### example Function
 
-```bash
+```
 
     npm i math-ts --save
 
 ```
         
-```typescript
+```
     
-    // import ts
+    // import object
     import { mt } from 'math-ts';
     mt.pascal(3)
     
-    // import one function
-    import {pascal} from 'math-ts';
+    // import  function
+    import { pascal } from 'math-ts';
     pascal(3);       //  [[1][1,1][1,2,1]]
     
     // takeTime for function
@@ -38,21 +38,19 @@ Easy Function of Typescript
     import {dateFormat} from date;
     dateFormat(new Date())  // 2018-11-11
     
-    sort
-    
 ```
 
 ### event
 
-```text
+```
 
-    eventBus                事件监听
+    eventBus                事件处理器
 
 ```
 
 ### array
     
-```text
+```
 
     arrayDifference         获取数组差集
     chunk                   数组分组
@@ -96,7 +94,7 @@ Easy Function of Typescript
     
 ### date
     
-```text
+```
 
     dateFormat                  格式化日期对象
     getPrev                     昨天，上个月，去年
@@ -107,7 +105,7 @@ Easy Function of Typescript
 
 ### math
     
-```text
+```
 
     average                 求平均数
     averageBy               根据条件求平均数
@@ -124,7 +122,7 @@ Easy Function of Typescript
 
 ### string
 
-```text
+```
 
     buildUrlParams                  对象转url查询参数
     capitalize                      首字母大写
@@ -153,9 +151,9 @@ Easy Function of Typescript
 
 ```
 
-### sort    排序算法样本
+### sort   排序
     
-```text
+```
 
     bubbleSort                      冒泡排序
     countingSort                    计数排序
@@ -171,7 +169,7 @@ Easy Function of Typescript
 
 ### package list
 
-```text
+```bash
 
     array
     collection
@@ -185,8 +183,10 @@ Easy Function of Typescript
     object
     queue
     sort
-    stacks
+    stack
+    string
     tree
+    web
     
 ```
 

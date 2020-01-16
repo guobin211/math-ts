@@ -4,5 +4,10 @@
  */
 
 import { eventBus } from './EventBus';
+import { broadcast } from "./Broadcast";
 
-export default eventBus;
+module.exports = {
+    eventBus,
+    broadcast,
+};
+
