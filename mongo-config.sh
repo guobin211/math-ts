@@ -11,3 +11,9 @@
 
 # use admin
 # db.shutdownServer()
+
+# use spacevim
+
+use esg2
+
+create `city_tree_node` table

@@ -1,7 +1,6 @@
 module.exports = {
   title: 'math-ts',
   description: 'Just playing Typescript function',
-  base: '/math-ts/',
   themeConfig: {
     nav: [
       { text: 'Github', link: 'https://github.com/guobin211/math-ts' },

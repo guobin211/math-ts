@@ -1,58 +1,54 @@
 # Typescript Tool
 
 Easy Function of Typescript
-
-Each function is independent and small
     
 ### example Function
 
-```bash
+```
 
     npm i math-ts --save
 
 ```
         
-```typescript
+```
     
-    // import ts
+    // import object
     import { mt } from 'math-ts';
     mt.pascal(3)
     
-    // import one function
-    import {pascal} from '@src/package.math/pascal';
+    // import  function
+    import { pascal } from 'math-ts';
     pascal(3);       //  [[1][1,1][1,2,1]]
     
     // takeTime for function
-    import {takeTime} from '@src/package.math/takeTime';
+    import {takeTime} from 'math-ts';
     const getName = () => {
       // ...
     }
     takeTime(getName);  //   测试函数耗时 timeTaken: 0.964ms
     
     // array
-    import {chunk} from '@src/package.array/chunk'; 
+    import {chunk} from array; 
     const arr = [1, 2, 3, 4];
     chunk(arr, 2);     // [ [1, 2], [3, 4] ]
     
     // date
-    import {dateFormat} from '@src/package.date/dateFormat';
+    import {dateFormat} from date;
     dateFormat(new Date())  // 2018-11-11
-    
-    // package.sort has 9 template of sort array
     
 ```
 
 ### event
 
-```text
+```
 
-    eventBus                事件监听
+    eventBus                事件处理器
 
 ```
 
 ### array
     
-```text
+```
 
     arrayDifference         获取数组差集
     chunk                   数组分组
@@ -96,7 +92,7 @@ Each function is independent and small
     
 ### date
     
-```text
+```
 
     dateFormat                  格式化日期对象
     getPrev                     昨天，上个月，去年
@@ -107,7 +103,7 @@ Each function is independent and small
 
 ### math
     
-```text
+```
 
     average                 求平均数
     averageBy               根据条件求平均数
@@ -124,7 +120,7 @@ Each function is independent and small
 
 ### string
 
-```text
+```
 
     buildUrlParams                  对象转url查询参数
     capitalize                      首字母大写
@@ -153,9 +149,9 @@ Each function is independent and small
 
 ```
 
-### sort    排序算法样本
+### sort   排序
     
-```text
+```
 
     bubbleSort                      冒泡排序
     countingSort                    计数排序
@@ -171,7 +167,7 @@ Each function is independent and small
 
 ### package list
 
-```text
+```bash
 
     array
     collection
@@ -185,8 +181,10 @@ Each function is independent and small
     object
     queue
     sort
-    stacks
+    stack
+    string
     tree
+    web
     
 ```
 

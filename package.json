@@ -1,6 +1,6 @@
 {
   "name": "math-ts",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "author": "guobin201314@gmail.com",
   "license": "MIT",
   "description": "Easy function of typescript",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "ts-node": "^7.0.1",
     "typescript": "^3.5.2",
-    "vuepress": "^1.1.0"
+    "vuepress": "^1.1.0",
+    "tslint": "^5.20.0"
   }
 }

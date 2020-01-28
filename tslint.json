@@ -13,12 +13,14 @@
         ]
       }
     ],
+    "indent": [true],
     "no-bitwise": false,
     "semicolon": false,
-    "quotemark": [true, "single"],
+    "quotemark": [false],
+    "one-variable-per-declaration": false,
     "no-empty-interface":true,
     "no-parameter-reassignment":false,
-    "prefer-for-of":true,
+    "prefer-for-of":false,
     "await-promise":true,
     "arrow-parens": false,
     "curly":true,
@@ -53,7 +55,7 @@
     "no-duplicate-imports":true,
     "no-console": false,
     "align":[true,"parameters","statements","members","elements"],
-    "array-type":[true,"array"],
+    "array-type":[false],
     "class-name":true,
     "comment-format":false,
     "encoding":true,
@@ -76,7 +78,7 @@
       "allow-pascal-case"
       ],
     "ban-types": false,
-    "ban-comma-operator": true,
+    "ban-comma-operator": false,
     "only-arrow-functions": false,
     "promise-function-async": true,
     "ban": [
