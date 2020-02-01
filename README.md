@@ -1,6 +1,13 @@
 # Typescript Tool
 
 Easy Function of Typescript
+
+### Contribute
+
+```
+    fork and pull-request
+
+```
     
 ### example Function
 
