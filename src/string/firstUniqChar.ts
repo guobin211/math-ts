@@ -3,10 +3,10 @@
  * @author guobin201314@gmail.com on 2019-01-16
  */
 
-export const firstUniqChar = function (s: string): number {
+export const firstUniqChar = function(s: string): number {
     for (let i = 0; i < s.length; i++) {
         const current = s[i];
-        const after = s.replace(current, '');
+        const after = s.replace(current, "");
         if (!after.includes(current)) {
             return i;
         }

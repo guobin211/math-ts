@@ -4,7 +4,7 @@
  * @param fn
  *
  */
-export function mapValues(obj: {[key: string]: any}, fn: () => void) {
+export function mapValues(obj: { [key: string]: any }, fn: () => void) {
     Object.keys(obj).reduce((acc, k) => {
         // @ts-ignore
         acc[k] = fn(obj[k], k, obj);

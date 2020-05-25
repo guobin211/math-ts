@@ -8,10 +8,10 @@ export const unescapeHTML = (str: string) =>
         tag =>
             // @ts-ignore
             ({
-                '&amp;': '&',
-                '&lt;': '<',
-                '&gt;': '>',
-                '&#39;': "'",
-                '&quot;': '"'
+                "&amp;": "&",
+                "&lt;": "<",
+                "&gt;": ">",
+                "&#39;": "'",
+                "&quot;": '"'
             }[tag] || tag)
     );

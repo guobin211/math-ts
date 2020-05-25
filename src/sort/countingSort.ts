@@ -21,7 +21,7 @@ function countingSort(arr: Array<number>, maxValue: number) {
     }
 
     for (let j = 0; j < bucketLen; j++) {
-        while(bucket[j] > 0) {
+        while (bucket[j] > 0) {
             arr[sortedIndex++] = j;
             bucket[j]--;
         }

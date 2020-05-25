@@ -4,7 +4,11 @@
  * @constructor
  */
 export function Confirm(message: string) {
-    return (target: object, key: keyof object, descriptor: PropertyDescriptor) => {
+    return (
+        target: object,
+        key: keyof object,
+        descriptor: PropertyDescriptor
+    ) => {
         const original = descriptor.value;
         descriptor.value = function(...args: any) {
             const allow = window.confirm(message);

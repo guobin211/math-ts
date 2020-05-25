@@ -4,5 +4,5 @@
  * @param pre
  */
 export const truthCheckCollection = (collection: any[], pre: string) => {
-    return collection.every((obj) => obj[pre]);
+    return collection.every(obj => obj[pre]);
 };

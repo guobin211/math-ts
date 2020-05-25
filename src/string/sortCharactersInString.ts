@@ -3,6 +3,4 @@
  * @param str
  */
 export const sortCharactersInString = (str: string) =>
-    [...str]
-        .sort((a, b) => a.localeCompare(b))
-        .join('');
+    [...str].sort((a, b) => a.localeCompare(b)).join("");

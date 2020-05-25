@@ -5,14 +5,13 @@
  */
 
 Function.prototype.call = function(context: any) {
-  if (typeof this !== 'function') {
-    throw new TypeError('not function');
-  }
-  // tslint:disable-next-line:no-parameter-reassignment
-  context = context || window;
-  context.fn = this;
-  const arg = [...arguments].slice(1);
-  const res = context.fn(...arg);
-  delete context.fn;
-  return res;
+    if (typeof this !== "function") {
+        throw new TypeError("not function");
+    }
+    context = context || window;
+    context.fn = this;
+    const arg = [...arguments].slice(1);
+    const res = context.fn(...arg);
+    delete context.fn;
+    return res;
 };

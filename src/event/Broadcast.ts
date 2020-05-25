@@ -18,7 +18,7 @@ class Broadcast {
     remove(listener: Function) {
         for (let i = 0; i < this._listener.length; i++) {
             if (this._listener[i] === listener) {
-                this._listener.splice(i , 1);
+                this._listener.splice(i, 1);
             }
         }
     }
@@ -35,4 +35,3 @@ class Broadcast {
 }
 
 export const broadcast = new Broadcast();
-

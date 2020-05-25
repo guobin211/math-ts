@@ -11,6 +11,7 @@ export function mapObject(arr: Array<any>, fn: any) {
     (a => (
         // @ts-ignore
         // tslint:disable-next-line:ban-comma-operator
-        (a = [arr, arr.map(fn)]), a[0].reduce((acc, val, ind) => ((acc[val] = a[1][ind]), acc), {})
+        (a = [arr, arr.map(fn)]),
+        a[0].reduce((acc, val, ind) => ((acc[val] = a[1][ind]), acc), {})
     ))();
 }

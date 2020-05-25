@@ -6,4 +6,4 @@ export const chainAsync = (fns: Array<Function>) => {
     let curr = 0;
     const next = () => fns[curr++](next);
     next();
-}
+};

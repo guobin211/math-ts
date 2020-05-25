@@ -5,5 +5,7 @@
  * @param val 数组默认值
  */
 export function init2DArray(w: number, h: number, val: any = null) {
-    return Array.from({length: h}).map(() => Array.from({length: w}).fill(val));
+    return Array.from({ length: h }).map(() =>
+        Array.from({ length: w }).fill(val)
+    );
 }

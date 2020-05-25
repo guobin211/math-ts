@@ -21,12 +21,12 @@
  * ```
  */
 export function extend<T, U>(source1: T, source2: U): T & U {
-  const result = {} as T & U;
-  for (const props in source1) {
-    (result as any)[props] = (source1 as any)[props];
-  }
-  for (const props in source2) {
-    (result as any)[props] = (source2 as any)[props];
-  }
-  return result;
+    const result = {} as T & U;
+    for (const props in source1) {
+        (result as any)[props] = (source1 as any)[props];
+    }
+    for (const props in source2) {
+        (result as any)[props] = (source2 as any)[props];
+    }
+    return result;
 }

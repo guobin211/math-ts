@@ -9,7 +9,9 @@
  */
 export function pullAtValue(arr: Array<any>, pullArr: Array<any>) {
     const removed: any[] = [],
-        pushToRemove = arr.forEach((v, i) => (pullArr.includes(v) ? removed.push(v) : v)),
+        pushToRemove = arr.forEach((v, i) =>
+            pullArr.includes(v) ? removed.push(v) : v
+        ),
         mutateTo = arr.filter((v, i) => !pullArr.includes(v));
     arr.length = 0;
     mutateTo.forEach(v => arr.push(v));

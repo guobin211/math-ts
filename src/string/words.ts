@@ -3,4 +3,5 @@
  * @param str
  * @param pattern
  */
-export const words = (str: string, pattern = /[^a-zA-Z-]+/) => str.split(pattern).filter(Boolean);
+export const words = (str: string, pattern = /[^a-zA-Z-]+/) =>
+    str.split(pattern).filter(Boolean);

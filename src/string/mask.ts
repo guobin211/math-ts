@@ -4,5 +4,5 @@
  * @param num
  * @param mask
  */
-export const mask = (cc: string, num: number = 4, mask = '*') =>
-    ('' + cc).slice(0, -num).replace(/./g, mask) + ('' + cc).slice(-num);
+export const mask = (cc: string, num: number = 4, mask = "*") =>
+    ("" + cc).slice(0, -num).replace(/./g, mask) + ("" + cc).slice(-num);

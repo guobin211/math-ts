@@ -4,5 +4,5 @@
  */
 
 export interface IObserver {
-  notify(data: any): void;
+    notify(data: any): void;
 }

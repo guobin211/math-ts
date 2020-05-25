@@ -3,6 +3,5 @@
  * @param arr
  */
 export const allEqual = (arr: any[]): boolean => {
-    return arr.every((val) => val === arr[0]);
+    return arr.every(val => val === arr[0]);
 };
-

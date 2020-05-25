@@ -1,4 +1,4 @@
-import {BoolFunction} from "./all";
+import { BoolFunction } from "./all";
 
 /**
  * 检测是否有符合的元素

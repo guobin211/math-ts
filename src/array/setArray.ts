@@ -4,5 +4,4 @@
  */
 export const setArray = (arr: Array<any>) => {
     return new Set(arr);
-}
-
+};

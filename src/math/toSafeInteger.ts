@@ -4,9 +4,13 @@
  */
 
 export const toSafeInteger = (num: number | string) => {
-    if (typeof num === 'string') {
+    if (typeof num === "string") {
         num = Number(num);
     }
-    return Math.round(Math.max(Math.min(num, Number.MAX_SAFE_INTEGER), Number.MIN_SAFE_INTEGER));
-}
-
+    return Math.round(
+        Math.max(
+            Math.min(num, Number.MAX_SAFE_INTEGER),
+            Number.MIN_SAFE_INTEGER
+        )
+    );
+};

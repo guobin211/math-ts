@@ -1,5 +1,4 @@
 export class ArrayQueue {
-
     private readonly collection: any[];
 
     constructor() {
@@ -12,7 +11,7 @@ export class ArrayQueue {
 
     dequeue(): any {
         if (this.isEmpty()) {
-            throw new Error('empty queue not allowed dequeue');
+            throw new Error("empty queue not allowed dequeue");
         } else {
             return this.collection.shift();
         }

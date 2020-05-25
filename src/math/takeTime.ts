@@ -3,9 +3,8 @@
  * @param callback
  */
 export const takeTime = (callback: Function) => {
-    console.time('timeTaken');
+    console.time("timeTaken");
     const r = callback();
-    console.timeEnd('timeTaken');
+    console.timeEnd("timeTaken");
     return r;
 };
-

@@ -12,7 +12,8 @@
     "build": "tsc",
     "build:types": "tsc --emitDeclarationOnly",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status"
   },
   "devDependencies": {
     "ts-node": "^7.0.1",

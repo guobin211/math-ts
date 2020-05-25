@@ -3,4 +3,5 @@
  * @param name
  * @param val
  */
-export const serializeCookie = (name: string, val: string) => `${encodeURIComponent(name)}=${encodeURIComponent(val)}`;
+export const serializeCookie = (name: string, val: string) =>
+    `${encodeURIComponent(name)}=${encodeURIComponent(val)}`;

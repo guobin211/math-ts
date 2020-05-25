@@ -4,5 +4,8 @@
  * @param callback
  */
 export function forEachRight(arr: Array<any>, callback: any) {
-    return arr.slice(0).reverse().forEach(callback);
+    return arr
+        .slice(0)
+        .reverse()
+        .forEach(callback);
 }

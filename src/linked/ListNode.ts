@@ -10,7 +10,7 @@ export class ListNode {
     constructor(args: number | number[]) {
         this.val = 0;
         this.next = null;
-        if (typeof (args) === 'number') {
+        if (typeof args === "number") {
             this.val = args;
         } else {
             this.initialize(args);
@@ -30,13 +30,13 @@ export class ListNode {
         }
     }
     public toString(): string {
-        let res: string = '[';
+        let res: string = "[";
         let current: ListNode | null = this;
         while (current !== null) {
-            res += current.val + ',';
+            res += current.val + ",";
             current = current.next;
         }
-        res = res.slice(0, res.length - 1) + ']';
+        res = res.slice(0, res.length - 1) + "]";
         return res;
     }
 

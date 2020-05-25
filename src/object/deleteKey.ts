@@ -4,7 +4,11 @@
  * @param keysToKeep
  * @param childIndicator
  */
-export function deleteKey(obj: any, keysToKeep: string[], childIndicator: string) {
+export function deleteKey(
+    obj: any,
+    keysToKeep: string[],
+    childIndicator: string
+) {
     Object.keys(obj).forEach(key => {
         if (key === childIndicator) {
             deleteKey(obj[key], keysToKeep, childIndicator);

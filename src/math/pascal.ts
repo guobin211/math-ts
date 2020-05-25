@@ -4,7 +4,6 @@
  */
 
 export const pascal = (numRows: number): any => {
-
     if (numRows === 0) {
         return [];
     }
@@ -12,15 +11,11 @@ export const pascal = (numRows: number): any => {
     let res = [[1]];
 
     for (let i = 1; i < numRows; i++) {
-
         res[i] = [];
 
         for (let j = 0; j < i + 1; j++) {
-
-            res[i][j] = (res[i - 1][j] || 0) + (res[i - 1][j - 1] || 0)
-
+            res[i][j] = (res[i - 1][j] || 0) + (res[i - 1][j - 1] || 0);
         }
-
     }
 
     return res;

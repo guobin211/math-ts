@@ -1,25 +1,46 @@
 export class HashMap<T> {
-  constructor() {
-  }
+    private _data: Map<string, T>;
+    private _length: number;
 
-  private static _objToHash(obj: any) {
-    if (typeof obj === 'number') {
+    get length() {
+        return this._length;
     }
-  }
 
-  static toBinaryString(obj: string): string {
-    return window.atob(obj)
-  }
+    get isEmpty() {
+        return this._length === 0;
+    }
 
-  static toUTF16(sString: string) {
-    const aUTF16CodeUnits: any = new Uint16Array(sString.length);
-    Array.prototype.forEach.call(aUTF16CodeUnits, function (el, idx, arr) {
-      arr[idx] = sString.charCodeAt(idx);
-    });
-    return window.btoa(String.fromCharCode.apply(null, new Uint8Array(aUTF16CodeUnits.buffer) as any));
-  }
+    constructor() {
+        this._data = new Map<string, T>();
+        this._length = 0;
+    }
 
-  hash(obj: T) {
+    has(key: string): boolean {
+        return this._data.has(key);
+    }
 
-  }
+    remove(key: string) {
+        if (this._data.has(key)) {
+            this._data.delete(key);
+            this._length--;
+        }
+    }
+
+    set(key: string, value: any) {
+        if (this._data.has(key)) {
+            this._data.set(key, value);
+        } else {
+            this._data.set(key, value);
+            this._length++;
+        }
+    }
+
+    get(key: string): T | undefined {
+        return this._data.get(key);
+    }
+
+    clear() {
+        this._data = new Map<string, T>();
+        this._length = 0;
+    }
 }

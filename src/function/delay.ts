@@ -6,5 +6,5 @@
 export function delay(fn: Function, t: number) {
     setTimeout(() => {
         fn();
-    }, t)
+    }, t);
 }

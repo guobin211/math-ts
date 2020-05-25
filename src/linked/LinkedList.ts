@@ -8,4 +8,3 @@ export class LinkedList<T> implements Linked<T> {
         this.data = Object.create(null);
     }
 }
-

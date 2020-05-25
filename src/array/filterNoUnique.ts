@@ -3,6 +3,5 @@
  * @param arr
  */
 export function filterNoUnique(arr: Array<any>) {
-   return arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
+    return arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i));
 }
-

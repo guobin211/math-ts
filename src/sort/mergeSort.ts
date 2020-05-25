@@ -23,13 +23,10 @@ export function mergeSort(arr: Array<number>): any {
             }
         }
 
-        while (left.length)
-            result.push(left.shift());
+        while (left.length) result.push(left.shift());
 
-        while (right.length)
-            result.push(right.shift());
+        while (right.length) result.push(right.shift());
 
         return result;
     }
 }
-

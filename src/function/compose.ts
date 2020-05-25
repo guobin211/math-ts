@@ -10,4 +10,5 @@
  *  const multiplyAndAdd5 = compose(add5, multiply);
  *  multiplyAndAdd5(5, 2); // 15
  */
-export const compose = (...fns: any[]) => fns.reduce((f, g) => (...args: any) => f(g(...args)));
+export const compose = (...fns: any[]) =>
+    fns.reduce((f, g) => (...args: any) => f(g(...args)));

@@ -14,4 +14,3 @@ export const maxProfit = function(prices: number[]) {
     }
     return res;
 };
-

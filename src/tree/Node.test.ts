@@ -15,11 +15,9 @@ class NumberNode extends BaseNode<number> {
         this.children = [];
         this.isRoot = () => this.parentId === null;
     }
-
 }
 
 class NodeManage {
-
     private readonly _list: NumberNode[] = [];
 
     public addElement(el: NumberNode) {
@@ -49,7 +47,10 @@ class NodeManage {
         return null;
     }
 
-    private _insertByParentId(el: NumberNode, list: NumberNode[]): NumberNode | null {
+    private _insertByParentId(
+        el: NumberNode,
+        list: NumberNode[]
+    ): NumberNode | null {
         for (const item of list) {
             if (item.id === el.parentId) {
                 item.children.push(el);
@@ -61,5 +62,4 @@ class NodeManage {
         }
         return null;
     }
-
 }

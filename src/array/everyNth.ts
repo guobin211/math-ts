@@ -6,4 +6,3 @@
 export function everyNth<T>(arr: Array<T>, nth: number) {
     return arr.filter((e, i) => i % nth === nth - 1);
 }
-
