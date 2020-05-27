@@ -1,3 +1,6 @@
+/**
+ * window error listener
+ */
 export function localError() {
     window.onerror = function(message, source, lineno, colno, error) {
         console.error(`${source} has errer: ${error}`);

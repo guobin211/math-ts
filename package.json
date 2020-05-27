@@ -1,6 +1,6 @@
 {
   "name": "math-ts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "guobin201314@gmail.com",
   "license": "MIT",
   "description": "Easy function of typescript",
@@ -11,14 +11,12 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build": "tsc",
     "build:types": "tsc --emitDeclarationOnly",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status"
+    "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' --fix"
   },
   "devDependencies": {
     "ts-node": "^7.0.1",
-    "typescript": "^3.5.2",
-    "vuepress": "^1.1.0",
-    "tslint": "^5.20.0"
+    "tslint": "^5.20.0",
+    "typescript": "^3.5.2"
   }
 }

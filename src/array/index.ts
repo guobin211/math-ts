@@ -1,6 +1,6 @@
 export * from "./all";
 export * from "./allEqual";
-export * from "./any";
+export * from "./anyFn";
 export * from "./arrayDifference";
 export * from "./arrayToCSV";
 export * from "./chunk";

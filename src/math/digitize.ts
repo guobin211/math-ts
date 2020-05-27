@@ -2,5 +2,4 @@
  * 将数字转化为整数数组
  * @param n
  */
-// @ts-ignore
-export const digitize = n => [...`${n}`].map(i => parseInt(i));
+export const digitize = (n: any) => [...`${n}`].map(i => parseInt(i, 10));

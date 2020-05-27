@@ -29,11 +29,11 @@ export class Tree<T> {
      * 前序遍历
      * @param root
      */
-    public preorder(root: Tree<T> | null) {
+    public preOrder(root: Tree<T> | null) {
         if (root !== null) {
             console.log(root.data);
-            this.preorder(root.left);
-            this.preorder(root.right);
+            this.preOrder(root.left);
+            this.preOrder(root.right);
         }
     }
 
@@ -41,11 +41,11 @@ export class Tree<T> {
      * 中序遍历
      * @param root
      */
-    public inorder(root: Tree<T> | null) {
+    public inOrder(root: Tree<T> | null) {
         if (root !== null) {
-            this.preorder(root.left);
+            this.inOrder(root.left);
             console.log(root.data);
-            this.preorder(root.right);
+            this.inOrder(root.right);
         }
     }
 
@@ -53,11 +53,11 @@ export class Tree<T> {
      * 后序遍历
      * @param root
      */
-    public afterorder(root: Tree<T> | null) {
+    public afterOrder(root: Tree<T> | null) {
         if (root !== null) {
             console.log(root.data);
-            this.preorder(root.left);
-            this.preorder(root.right);
+            this.afterOrder(root.left);
+            this.afterOrder(root.right);
         }
     }
 }

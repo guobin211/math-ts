@@ -8,10 +8,10 @@
  * 当k不是很大并且序列比较集中时，计数排序是一个很有效的排序算法
  */
 function countingSort(arr: Array<number>, maxValue: number) {
-    let bucket = new Array(maxValue + 1),
-        sortedIndex = 0,
+    const bucket = new Array(maxValue + 1),
         arrLen = arr.length,
         bucketLen = maxValue + 1;
+    let sortedIndex = 0;
 
     for (let i = 0; i < arrLen; i++) {
         if (!bucket[arr[i]]) {

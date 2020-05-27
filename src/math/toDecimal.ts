@@ -6,8 +6,8 @@
 
 export function toDecimal(data: number | string, num: number): number {
     if (typeof data === "string") {
-        return parseFloat(parseFloat(<string>data).toFixed(num));
+        return parseFloat(parseFloat(data as string).toFixed(num));
     } else {
-        return parseFloat((<number>data).toFixed(num));
+        return parseFloat((data as number).toFixed(num));
     }
 }

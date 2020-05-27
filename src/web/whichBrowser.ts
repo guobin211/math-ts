@@ -1,5 +1,6 @@
 /**
  * whichBrowser
+ * 浏览器类型 Opera Chrome Safari FF IE
  * @author guobin201314@gmail.com on 2019-04-17
  */
 

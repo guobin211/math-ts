@@ -25,9 +25,9 @@ class EventBus implements ISubjectBus {
 
     publish(eventType: string, data: any): void {
         try {
-            (this.observersMap.get(eventType) as IObserver[]).forEach(
-                (el: IObserver) => el.notify(data)
-            );
+            (this.observersMap.get(
+                eventType
+            ) as IObserver[]).forEach((el: IObserver) => el.notify(data));
         } catch (e) {
             console.error("@Param<eventType>错误,未注册的事件: " + eventType);
         }

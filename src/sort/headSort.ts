@@ -17,23 +17,23 @@ export function heapSort(arr: Array<number>) {
 
     /**
      * 建立大顶堆
-     * @param arr
+     * @param arr1
      */
-    function buildMaxHeap(arr: Array<number>) {
+    function buildMaxHeap(arr1: Array<number>) {
         for (let i = Math.floor(len / 2); i >= 0; i--) {
-            heaping(arr, i);
+            heaping(arr1, i);
         }
     }
 
     /**
      * 堆调整
-     * @param arr
+     * @param arr1
      * @param i
      */
-    function heaping(arr: Array<number>, i: number) {
-        let left = 2 * i + 1,
-            right = 2 * i + 2,
-            largest = i;
+    function heaping(arr1: Array<number>, i: number) {
+        const left = 2 * i + 1,
+            right = 2 * i + 2;
+        let largest = i;
 
         if (left < len && arr[left] > arr[largest]) {
             largest = left;
@@ -43,15 +43,15 @@ export function heapSort(arr: Array<number>) {
             largest = right;
         }
 
-        if (largest != i) {
+        if (largest !== i) {
             swap(arr, i, largest);
             heaping(arr, largest);
         }
     }
 
-    function swap(arr: Array<number>, i: number, j: number) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    function swap(arr1: Array<number>, i: number, j: number) {
+        const temp = arr1[i];
+        arr1[i] = arr1[j];
+        arr1[j] = temp;
     }
 }

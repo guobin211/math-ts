@@ -1,7 +1,7 @@
 import {
     all,
     allEqual,
-    any,
+    anyFn,
     arrayDifference,
     arrayToCSV,
     chunk,
@@ -83,7 +83,7 @@ import {
     getURLParams,
     htmlToExcel,
     isAbsoluteURL,
-    mask,
+    maskStr,
     randomHexColorCode,
     reverseString,
     serializeCookie,
@@ -97,7 +97,7 @@ import {
 } from "./string";
 import { browserWidth, isWebUrl, parseCookie, whichBrowser } from "./web";
 
-module.exports = exports = {
+module.exports = {
     browserWidth,
     buildUrlParams,
     isWebUrl,
@@ -113,7 +113,7 @@ module.exports = exports = {
     getURLParams,
     htmlToExcel,
     isAbsoluteURL,
-    mask,
+    maskStr,
     randomHexColorCode,
     reverseString,
     serializeCookie,
@@ -156,7 +156,7 @@ module.exports = exports = {
     truthCheckCollection,
     all,
     allEqual,
-    any,
+    anyFn,
     arrayDifference,
     arrayToCSV,
     chunk,

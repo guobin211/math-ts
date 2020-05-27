@@ -8,8 +8,11 @@
  */
 export function isSorted(arr: Array<any>) {
     const direction = arr[0] > arr[1] ? -1 : 1;
-    // @ts-ignore
-    for (let [i, val] of arr.entries())
-        if (i === arr.length - 1) return direction;
-        else if ((val - arr[i + 1]) * direction > 0) return 0;
+    for (const [i, val] of arr.entries()) {
+        if (i === arr.length - 1) {
+            return direction;
+        } else if ((val - arr[i + 1]) * direction > 0) {
+            return 0;
+        }
+    }
 }

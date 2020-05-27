@@ -1,3 +1,7 @@
+/**
+ * 加载style
+ * @param url
+ */
 export function loadStyle(url: string) {
     return new Promise((resolve, reject) => {
         if (

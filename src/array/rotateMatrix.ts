@@ -11,7 +11,7 @@ export const rotateMatrix = function(matrix: any) {
     if (matrix.length !== matrix[0].length) {
         throw new Error("not a matrix (n x n) array");
     }
-    let size = matrix.length;
+    const size = matrix.length;
     const times = Math.floor(size / 2);
 
     for (let i = 0; i < times; i++) {

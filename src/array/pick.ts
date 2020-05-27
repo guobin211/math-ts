@@ -6,9 +6,7 @@
  * @example
  * pick({ a: 1, b: '2', c: 3 }, ['a', 'c']); // { 'a': 1, 'c': 3 }
  */
-export function pick(obj: Object, arr: Array<any>) {
-    // @ts-ignore
-    // tslint:disable-next-line:ban-comma-operator
+export function pick(obj: any, arr: Array<any>) {
     return arr.reduce(
         (acc, curr) => (curr in obj && (acc[curr] = obj[curr]), acc),
         {}

@@ -22,11 +22,15 @@
  */
 export function extend<T, U>(source1: T, source2: U): T & U {
     const result = {} as T & U;
-    for (const props in source1) {
-        (result as any)[props] = (source1 as any)[props];
+    for (const prop in source1) {
+        if ((source1 as any).hasOwnProperty(prop)) {
+            (result as any)[prop] = (source1 as any)[prop];
+        }
     }
-    for (const props in source2) {
-        (result as any)[props] = (source2 as any)[props];
+    for (const prop in source2) {
+        if ((source2 as any).hasOwnProperty(prop)) {
+            (result as any)[prop] = (source2 as any)[prop];
+        }
     }
     return result;
 }

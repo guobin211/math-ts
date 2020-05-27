@@ -8,7 +8,7 @@ export const pascal = (numRows: number): any => {
         return [];
     }
 
-    let res = [[1]];
+    const res = [[1]];
 
     for (let i = 1; i < numRows; i++) {
         res[i] = [];

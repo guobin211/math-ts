@@ -9,7 +9,7 @@
  */
 export function pullAtIndex(arr: Array<any>, pullArr: Array<any>) {
     const removed: any[] = [];
-    let pulled = arr
+    const pulled = arr
         .map((v, i) => (pullArr.includes(i) ? removed.push(v) : v))
         .filter((v, i) => !pullArr.includes(i));
     arr.length = 0;

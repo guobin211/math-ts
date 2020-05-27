@@ -3,7 +3,7 @@
  * @param str
  */
 export const toCamelCase = (str: string) => {
-    let s =
+    const s =
         str &&
         // @ts-ignore
         str
