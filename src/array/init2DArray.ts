@@ -4,8 +4,7 @@
  * @param h 数组行数
  * @param val 数组默认值
  */
-export function init2DArray(w: number, h: number, val: any = null) {
-    return Array.from({ length: h }).map(() =>
-        Array.from({ length: w }).fill(val)
-    );
+function init2DArray(w: number, h: number, val: any = null) {
+  return Array.from({ length: h }).map(() => Array.from({ length: w }).fill(val))
 }
+export default init2DArray

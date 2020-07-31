@@ -4,6 +4,8 @@
  * @param arr
  * @param delimiter
  */
-export const arrayToCSV = (arr: Array<any>, delimiter = ","): string => {
-    return arr.map(v => v.map((x: any) => `"${x}"`).join(delimiter)).join("\n");
-};
+const arrayToCSV = (arr: Array<any>, delimiter = ","): string => {
+  return arr.map(v => v.map((x: any) => `"${x}"`).join(delimiter)).join("\n")
+}
+
+export default arrayToCSV

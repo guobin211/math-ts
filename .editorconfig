@@ -1,0 +1,8 @@
+root = true
+
+[*]
+charset = utf-8
+ij_typescript_use_semicolon_after_statement = false
+ij_javascript_use_semicolon_after_statement = false
+indent_size = 2
+tab_width = 2

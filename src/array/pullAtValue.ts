@@ -7,13 +7,13 @@
  * let myArray = ['a', 'b', 'c', 'd'];
  * let pulled = pullAtValue(myArray, ['b', 'd']); // myArray = [ 'a', 'c' ] , pulled = [ 'b', 'd' ]
  */
-export function pullAtValue(arr: Array<any>, pullArr: Array<any>) {
-    const removed: any[] = [],
-        pushToRemove = arr.forEach((v, i) =>
-            pullArr.includes(v) ? removed.push(v) : v
-        ),
-        mutateTo = arr.filter((v, i) => !pullArr.includes(v));
-    arr.length = 0;
-    mutateTo.forEach(v => arr.push(v));
-    return removed;
+function pullAtValue(arr: Array<any>, pullArr: Array<any>) {
+  arr.forEach((v, _i) => (pullArr.includes(v) ? removed.push(v) : v))
+  const removed: any[] = [],
+    mutateTo = arr.filter((v, _i) => !pullArr.includes(v))
+  arr.length = 0
+  mutateTo.forEach(v => arr.push(v))
+  return removed
 }
+
+export default pullAtValue

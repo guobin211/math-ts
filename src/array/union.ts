@@ -3,6 +3,8 @@
  * @param a
  * @param b
  */
-export function union(a: Array<any>, b: Array<any>) {
-    return Array.from(new Set([...a, ...b]));
+function union(a: Array<any>, b: Array<any>) {
+  return Array.from(new Set([...a, ...b]))
 }
+
+export default union

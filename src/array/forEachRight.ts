@@ -3,9 +3,11 @@
  * @param arr
  * @param callback
  */
-export function forEachRight(arr: Array<any>, callback: any) {
-    return arr
-        .slice(0)
-        .reverse()
-        .forEach(callback);
+function forEachRight(arr: Array<any>, callback: any) {
+  return arr
+    .slice(0)
+    .reverse()
+    .forEach(callback)
 }
+
+export default forEachRight
