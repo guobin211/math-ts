@@ -1,13 +1,19 @@
-export * from "./average";
-export * from "./averageBy";
-export * from "./digitize";
-export * from "./factorial";
-export * from "./index";
-export * from "./pascal";
-export * from "./size";
-export * from "./standardDeviation";
-export * from "./sum";
-export * from "./sumPower";
-export * from "./takeTime";
-export * from "./toDecimal";
-export * from "./toSafeInteger";
+import average from "math/average"
+import averageBy from "math/averageBy"
+import pascal from "math/pascal"
+import standardDeviation from "math/standardDeviation"
+import sumPower from "math/sumPower"
+import takeTime from "math/takeTime"
+import toDecimal from "math/toDecimal"
+import toSafeInteger from "math/toSafeInteger"
+
+export default {
+  average,
+  averageBy,
+  pascal,
+  standardDeviation,
+  sumPower,
+  takeTime,
+  toDecimal,
+  toSafeInteger,
+}

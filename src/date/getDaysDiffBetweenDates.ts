@@ -3,6 +3,8 @@
  * @param dateInitial
  * @param dateFinal
  */
-export function getDaysDiffBetweenDates(dateInitial: Date, dateFinal: Date) {
-    return (dateFinal.getTime() - dateInitial.getTime()) / (1000 * 3600 * 24);
+function getDaysDiffBetweenDates(dateInitial: Date, dateFinal: Date) {
+  return (dateFinal.getTime() - dateInitial.getTime()) / (1000 * 3600 * 24)
 }
+
+export default getDaysDiffBetweenDates

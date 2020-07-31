@@ -3,7 +3,9 @@
  * @param a
  * @param b
  */
-export function intersection(a: Array<any>, b: Array<any>) {
-    const s = new Set(b);
-    return a.filter(x => s.has(x));
+function intersection(a: Array<any>, b: Array<any>) {
+  const s = new Set(b)
+  return a.filter(x => s.has(x))
 }
+
+export default intersection

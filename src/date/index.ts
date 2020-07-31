@@ -1,5 +1,11 @@
-export * from "./dateFormat";
-export * from "./getDaysDiffBetweenDates";
-export * from "./getNext";
-export * from "./getPrev";
-export * from "./index";
+import dataFormat from "date/dateFormat"
+import getDaysDiffBetweenDates from "date/getDaysDiffBetweenDates"
+import getPrev from "date/getPrev"
+import getNext from "date/getNext"
+
+export default {
+  dataFormat,
+  getDaysDiffBetweenDates,
+  getPrev,
+  getNext,
+}

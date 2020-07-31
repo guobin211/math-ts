@@ -18,12 +18,13 @@
 ];
 
 reducedFilter(data, ['id', 'name'], item => item.age > 24); // [{ id: 2, name: 'mike'}]*/
-export function reducedFilter(data: Array<any>, keys: Array<string>, fn: any) {
-    return data.filter(fn).map(el =>
-        keys.reduce((acc, key) => {
-            // @ts-ignore
-            acc[key] = el[key];
-            return acc;
-        }, {})
-    );
+function reducedFilter(data: Array<any>, keys: Array<string>, fn: any) {
+  return data.filter(fn).map(el =>
+    keys.reduce((acc: any, key) => {
+      acc[key] = el[key]
+      return acc
+    }, {})
+  )
 }
+
+export default reducedFilter

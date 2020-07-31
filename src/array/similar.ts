@@ -3,6 +3,8 @@
  * @param arr
  * @param values
  */
-export function similar(arr: Array<any>, values: Array<any>) {
-    return arr.filter(v => values.includes(v));
+function similar(arr: Array<any>, values: Array<any>) {
+  return arr.filter(v => values.includes(v))
 }
+
+export default similar

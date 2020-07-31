@@ -1,18 +1,21 @@
 /**
  * 插入排序
- * @param arr
+ * O(N^2)
+ * O(1)
+ * @param arr T[]
  */
-export function insertionSort(arr: Array<number>) {
-    const len = arr.length;
-    let preIndex, current;
-    for (let i = 1; i < len; i++) {
-        preIndex = i - 1;
-        current = arr[i];
-        while (preIndex >= 0 && arr[preIndex] > current) {
-            arr[preIndex + 1] = arr[preIndex];
-            preIndex--;
-        }
-        arr[preIndex + 1] = current;
+function insertionSort<T>(arr: T[]) {
+  const len = arr.length
+  let preIndex, current
+  for (let i = 1; i < len; i++) {
+    preIndex = i - 1
+    current = arr[i]
+    while (preIndex >= 0 && arr[preIndex] > current) {
+      arr[preIndex + 1] = arr[preIndex]
+      preIndex--
     }
-    return arr;
+    arr[preIndex + 1] = current
+  }
 }
+
+export default insertionSort

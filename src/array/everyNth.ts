@@ -3,6 +3,8 @@
  * @param arr
  * @param nth
  */
-export function everyNth<T>(arr: Array<T>, nth: number) {
-    return arr.filter((e, i) => i % nth === nth - 1);
+function everyNth<T>(arr: Array<T>, nth: number) {
+  return arr.filter((_e, i) => i % nth === nth - 1)
 }
+
+export default everyNth
