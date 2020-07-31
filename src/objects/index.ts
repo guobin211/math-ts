@@ -1,13 +1,13 @@
-import deepClone from "objects/deepClone"
-import deleteKey from "objects/deleteKey"
-import getType from "objects/getType"
-import invertKeyValues from "objects/invertKeyValues"
-import isArrayLike from "objects/isArrayLike"
-import isValidKey from "objects/isValidKey"
-import lowerCaseKeys from "objects/lowerCaseKeys"
-import mapKeys from "objects/mapKeys"
-import mapValues from "objects/mapValues"
-import merge from "objects/merge"
+import deepClone from "./deepClone"
+import deleteKey from "./deleteKey"
+import getType from "./getType"
+import invertKeyValues from "./invertKeyValues"
+import isArrayLike from "./isArrayLike"
+import isValidKey from "./isValidKey"
+import lowerCaseKeys from "./lowerCaseKeys"
+import mapKeys from "./mapKeys"
+import mapValues from "./mapValues"
+import merge from "./merge"
 
 export default {
   deepClone,
