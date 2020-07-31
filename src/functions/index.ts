@@ -1,9 +1,9 @@
-import chainAsync from "functions/chainAsync"
-import compose from "functions/compose"
-import delay from "functions/delay"
-import sleep from "functions/sleep"
-import Emoji from "functions/Emoji"
-import Confirm from "functions/Confirm"
+import chainAsync from "./chainAsync"
+import compose from "./compose"
+import delay from "./delay"
+import sleep from "./sleep"
+import Emoji from "./Emoji"
+import Confirm from "./Confirm"
 
 export default {
   chainAsync,

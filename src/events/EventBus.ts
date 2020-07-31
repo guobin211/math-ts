@@ -1,5 +1,5 @@
-import { BaseObserver } from "events/BaseObserver"
-import { BaseEventBus } from "events/BaseEventBus"
+import { BaseObserver } from "./BaseObserver"
+import { BaseEventBus } from "./BaseEventBus"
 
 const GlobalEventBusKey = Symbol("GlobalEventBus")
 

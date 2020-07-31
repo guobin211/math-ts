@@ -6,7 +6,7 @@
 const countBy = (arr: any, fn: any) =>
   arr
     .map(typeof fn === "function" ? fn : (val: { [x: string]: any }) => val[fn])
-    .reduce((acc: { [x: string]: any }, val: string | number, _i: any) => {
+    .reduce((acc: { [x: string]: any }, val: string | number) => {
       acc[val] = (acc[val] || 0) + 1
       return acc
     }, {})

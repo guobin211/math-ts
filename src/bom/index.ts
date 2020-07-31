@@ -1,4 +1,4 @@
-import whichBrowser from "bom/whichBrowser"
+import whichBrowser from "./whichBrowser"
 
 export default {
   whichBrowser,

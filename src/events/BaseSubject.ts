@@ -1,4 +1,4 @@
-import { BaseObserver } from "events/BaseObserver"
+import { BaseObserver } from "./BaseObserver"
 
 export interface BaseSubject<T> {
   // 注册订阅

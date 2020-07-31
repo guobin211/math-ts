@@ -9,7 +9,7 @@ import dom from "./dom"
 import sort from "./sort"
 import events from "./events"
 
-export default {
+const MT = {
   ...array,
   ...date,
   ...functions,
@@ -21,3 +21,5 @@ export default {
   ...sort,
   ...events,
 }
+
+export default MT
