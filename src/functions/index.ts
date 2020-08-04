@@ -4,6 +4,7 @@ import delay from "./delay"
 import sleep from "./sleep"
 import Emoji from "./Emoji"
 import Confirm from "./Confirm"
+import bindFn from "./bindFn"
 
 export default {
   chainAsync,
@@ -12,4 +13,5 @@ export default {
   sleep,
   Emoji,
   Confirm,
+  bindFn,
 }
