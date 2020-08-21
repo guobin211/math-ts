@@ -3,5 +3,5 @@ import attr from "./attr"
 
 export default {
   browserWidth,
-  attr
+  attr,
 }
