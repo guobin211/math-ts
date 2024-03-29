@@ -1,0 +1,13 @@
+{
+    "name": "@guobin211/math-ts-wasm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "",
+        "build": "wasm-pack build"
+    },
+    "devDependencies": {
+        "wasm-pack": "^0.12.1"
+    }
+}

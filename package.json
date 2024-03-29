@@ -1,42 +1,25 @@
 {
-  "version": "1.1.2",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint src --fix",
-    "prepare": "tsdx build",
-    "asbuild:untouched": "asc assembly/index.ts --target debug",
-    "asbuild:optimized": "asc assembly/index.ts --target release",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
+    "name": "math-ts",
+    "version": "0.0.0",
+    "description": "a math library",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "scripts": {
+        "test": "vitest run",
+        "fmt": "biome format --write ."
+    },
+    "packageManager": "pnpm@8.15.5",
+    "devDependencies": {
+        "@biomejs/biome": "^1.6.3",
+        "@napi-rs/cli": "^2.18.0",
+        "@types/node": "^20.11.30",
+        "prettier": "^3.2.5",
+        "tsx": "^4.7.1",
+        "typescript": "^5.4.3",
+        "vite": "^5.2.7",
+        "vitest": "^1.4.0",
+        "wasm-pack": "^0.12.1"
     }
-  },
-  "name": "math-ts",
-  "author": "GuoBin",
-  "module": "dist/math-ts.esm.js",
-  "devDependencies": {
-    "assemblyscript": "^0.14.7",
-    "husky": "^4.2.5",
-    "ts-node": "^8.10.2",
-    "tsdx": "^0.13.2",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.7"
-  },
-  "dependencies": {
-    "@assemblyscript/loader": "^0.14.7"
-  }
 }

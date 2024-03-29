@@ -1,10 +1,6 @@
-*.log
-.DS_Store
 node_modules
+target
 dist
 build
-.idea
-.vscode
-yarn.lock
-package-lock.json
-back
+npm
+pkg
