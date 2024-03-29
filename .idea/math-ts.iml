@@ -11,6 +11,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/math-ts/npm" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/packages/math-ts-wasm/pkg" />
+      <excludeFolder url="file://$MODULE_DIR$/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/math-ts-wasm/.turbo" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

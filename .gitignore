@@ -4,3 +4,10 @@ dist
 build
 npm
 pkg
+
+.turbo
+.idea
+
+packages/**/index.d.ts
+packages/**/index.js
+packages/**/*.node

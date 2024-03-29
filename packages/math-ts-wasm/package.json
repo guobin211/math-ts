@@ -2,12 +2,16 @@
     "name": "@guobin211/math-ts-wasm",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "pkg/math_ts_wasm.d.ts",
     "scripts": {
         "test": "",
-        "build": "wasm-pack build"
+        "build": "wasm-pack build",
+        "update": "pnpm update && cargo update"
     },
     "devDependencies": {
-        "wasm-pack": "^0.12.1"
+        "wasm-pack": "^0.12.1",
+        "@types/node": "^20.11.30"
     }
 }

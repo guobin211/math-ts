@@ -1,12 +1,11 @@
 [workspace]
-members = [ "packages/math-ts-core","packages/math-ts-napi", "packages/math-ts-wasm"]
+members = ["packages/math-ts-core", "packages/math-ts-wasm"]
 resolver = "2"
 
 [profile.release]
 lto = true
 opt-level = "s"
 strip = "symbols"
-
 
 [workspace.dependencies]
 serde = { version = "~1.0.188", features = ["derive"] }
