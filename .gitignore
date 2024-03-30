@@ -2,7 +2,6 @@ node_modules
 target
 dist
 build
-npm
 pkg
 
 .turbo
