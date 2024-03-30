@@ -1,12 +1,13 @@
 [package]
-edition = "2021"
 name = "math-ts-napi"
-version = "0.0.0"
+version = "2.0.0"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
+math-ts-core = { path = "../math-ts-core" }
 napi = { version = "2.12.2", default-features = false, features = ["napi4"] }
 napi-derive = "2.12.2"
 

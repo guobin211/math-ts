@@ -85,12 +85,13 @@ checksum = "90ed8c1e510134f979dbc4f070f87d4313098b704861a105fe34231c70a3901c"
 
 [[package]]
 name = "math-ts-core"
-version = "0.1.0"
+version = "2.0.0"
 
 [[package]]
 name = "math-ts-napi"
-version = "0.0.0"
+version = "2.0.0"
 dependencies = [
+ "math-ts-core",
  "napi",
  "napi-build",
  "napi-derive",
@@ -98,7 +99,7 @@ dependencies = [
 
 [[package]]
 name = "math-ts-wasm"
-version = "0.1.0"
+version = "2.0.0"
 dependencies = [
  "console_error_panic_hook",
  "math-ts-core",
@@ -236,9 +237,9 @@ checksum = "92d43fe69e652f3df9bdc2b85b2854a0825b86e4fb76bc44d945137d053639ca"
 
 [[package]]
 name = "syn"
-version = "2.0.55"
+version = "2.0.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "002a1b3dbf967edfafc32655d0f377ab0bb7b994aa1d32c8cc7e9b8bf3ebb8f0"
+checksum = "11a6ae1e52eb25aab8f3fb9fca13be982a373b8f1157ca14b897a825ba4a2d35"
 dependencies = [
  "proc-macro2",
  "quote",
