@@ -1,7 +1,7 @@
 mod utils;
 
-use wasm_bindgen::prelude::*;
 use crate::utils::set_panic_hook;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern "C" {

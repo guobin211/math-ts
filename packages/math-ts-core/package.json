@@ -1,12 +1,12 @@
 {
-    "name": "@guobin211/math-ts-core",
-    "version": "2.0.0",
-    "description": "",
-    "scripts": {
-        "update": "pnpm update && cargo update"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/guobin211/math-ts.git"
-    }
+  "name": "@guobin211/math-ts-core",
+  "version": "2.0.0",
+  "description": "",
+  "scripts": {
+    "update": "pnpm update && cargo update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guobin211/math-ts.git"
+  }
 }

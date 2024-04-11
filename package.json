@@ -1,31 +1,31 @@
 {
-    "name": "math-ts",
-    "version": "2.0.0",
-    "description": "a math library use rust and typescript",
-    "author": "michaelbguo",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "license": "MIT",
-    "scripts": {
-        "build:all": "turbo run build --parallel",
-        "test": "vitest run",
-        "fix": "cargo fix --allow-dirty --allow-staged",
-        "fmt": "dprint fmt && cargo fmt",
-        "update:all": "pnpm update -r"
-    },
-    "packageManager": "pnpm@8.15.5",
-    "devDependencies": {
-        "@biomejs/biome": "^1.6.3",
-        "@napi-rs/cli": "^2.18.0",
-        "@types/node": "^20.11.30",
-        "dprint": "^0.45.0",
-        "prettier": "^3.2.5",
-        "tsx": "^4.7.1",
-        "turbo": "^1.13.0",
-        "typescript": "^5.4.3",
-        "vite": "^5.2.7",
-        "vitest": "^1.4.0",
-        "wasm-pack": "^0.12.1"
-    }
+  "name": "math-ts",
+  "version": "2.0.0",
+  "description": "a math library use rust and typescript",
+  "author": "michaelbguo",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo run build --parallel",
+    "test": "vitest run",
+    "fix": "cargo fix --allow-dirty --allow-staged",
+    "fmt": "dprint fmt && cargo fmt",
+    "update:all": "pnpm update -r"
+  },
+  "packageManager": "pnpm@8.15.5",
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "@napi-rs/cli": "^2.18.1",
+    "@types/node": "^20.12.7",
+    "dprint": "^0.45.1",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.2",
+    "turbo": "^1.13.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.8",
+    "vitest": "^1.4.0",
+    "wasm-pack": "^0.12.1"
+  }
 }
